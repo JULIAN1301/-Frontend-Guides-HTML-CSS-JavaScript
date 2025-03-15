@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📖 Guía Completa de CSS</title>
+    <link rel="stylesheet" href="DISEÑO-CSS.css">
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="navbar-container">
+          <div class="navbar-logo">Guía CSS</div>
+          <button class="navbar-toggle" id="navbar-toggle" aria-label="Abrir menú de navegación">
+            <span class="hamburger"></span>
+          </button>
+          <ul class="navbar-menu" id="navbar-menu">
+            <li class="navbar-item"><a href="#unidades" class="navbar-link">Unidades de Medida</a></li>
+            <li class="navbar-item"><a href="#colores-fondos" class="navbar-link">Colores y Fondos</a></li>
+            <li class="navbar-item"><a href="#tipografias" class="navbar-link">Tipografías</a></li>
+            <li class="navbar-item"><a href="#espaciado" class="navbar-link">Espaciado</a></li>
+            <li class="navbar-item"><a href="#posicionamiento" class="navbar-link">Posicionamiento</a></li>
+            <li class="navbar-item"><a href="#transformaciones" class="navbar-link">Transformaciones</a></li>
+            <li class="navbar-item"><a href="#pseudoclases" class="navbar-link">Pseudoclases</a></li>
+            <li class="navbar-item"><a href="#variables" class="navbar-link">Variables CSS</a></li>
+            <li class="navbar-item"><a href="#responsive" class="navbar-link">Responsive Design</a></li>
+            <a href="📖 Guía Completa de HTML.html" class="navbar-logo">Guía HTML</a>
+          </ul>
+        </div>
+      </nav>
+         
+      
+     <header>
+        <h1>📖 Guía Completa de CSS</h1>
+        <p>Aprende desde lo básico hasta lo avanzado en CSS.</p>
+    </header>
+
+    <section id="unidades">
+        <h2>📏 1. Unidades de Medida en CSS</h2>
+        <p>Las unidades de medida en CSS permiten definir tamaños, márgenes, anchos y más. Se dividen en <strong>relativas</strong> y <strong>absolutas</strong>.</p>
+
+        <h3>📜 Lista de unidades de medida en CSS</h3>
+        <pre><code>px, cm, mm, in, pt, pc, %, em, rem, vw, vh, vmin, vmax, ex, ch</code></pre>
+
+        <h3>📌 1.1. Unidades Absolutas</h3>
+        <p>Las unidades absolutas tienen un tamaño fijo y no cambian según el contexto.</p>
+        <ul>
+            <li><code>px</code> - Píxeles (unidad más común en pantallas).</li>
+            <li><code>cm</code>, <code>mm</code>, <code>in</code> - Centímetros, milímetros y pulgadas.</li>
+            <li><code>pt</code>, <code>pc</code> - Puntos y picas (usados en impresión).</li>
+        </ul>
+        <pre><code>div { width: 100px; height: 50px; }</code></pre>
+        <div style="width: 100px; height: 50px; background: lightblue; text-align: center; line-height: 50px;">
+            100px × 50px
+        </div>
+
+        <h3>📐 1.2. Unidades Relativas</h3>
+        <p>Las unidades relativas dependen del tamaño del contenedor o del texto.</p>
+        <ul>
+            <li><code>%</code> - Relativo al contenedor padre.</li>
+            <li><code>em</code> - Relativo al tamaño de fuente del elemento.</li>
+            <li><code>rem</code> - Relativo al tamaño de fuente de <code>html</code>.</li>
+            <li><code>vw</code>, <code>vh</code> - Porcentaje del ancho o alto de la ventana.</li>
+        </ul>
+        <pre><code>div { width: 50%; height: 10vh; font-size: 2em; }</code></pre>
+        <div style="width: 50%; height: 10vh; background: lightcoral; text-align: center; font-size: 2em;">
+            50% de ancho, 10vh de alto
+        </div>
+
+        <h3>🎯 1.3. Comparación entre <code>em</code> y <code>rem</code></h3>
+        <p><code>em</code> escala según el elemento padre, mientras que <code>rem</code> se basa en <code>html</code>.</p>
+        <pre><code>html { font-size: 16px; }
+.container { font-size: 20px; }
+.em-example { font-size: 2em; } /* 40px */
+.rem-example { font-size: 2rem; } /* 32px (16px × 2) */</code></pre>
+        <div style="font-size: 20px; padding: 10px; border: 1px solid black;">
+            <p style="font-size: 2em; background: lightgreen;">Este texto usa 2em</p>
+            <p style="font-size: 2rem; background: lightyellow;">Este texto usa 2rem</p>
+        </div>
+    </section>
+
+    <section id="colores-fondos">
+        <h2>🎨 2. Colores y Fondos en CSS</h2>
+        <p>CSS permite definir colores y fondos para los elementos de una página web.</p>
+    
+        <h3>📜 Lista de propiedades de colores y fondos en CSS</h3>
+        <pre><code>color, background-color, background-image, background-repeat, background-position, 
+background-size, background-attachment, background-clip, background-origin, 
+background-blend-mode, opacity, linear-gradient, radial-gradient</code></pre>
+    
+        <h3>🌈 2.1. Propiedad <code>color</code></h3>
+        <p>Define el color del texto de un elemento. Se pueden usar:</p>
+        <ul>
+            <li><b>Colores por nombre:</b> Ejemplo: <code>red</code>, <code>blue</code>, <code>green</code>.</li>
+            <li><b>Valores HEX:</b> Ejemplo: <code>#ff0000</code> (rojo), <code>#00ff00</code> (verde).</li>
+            <li><b>RGB:</b> Ejemplo: <code>rgb(255, 0, 0)</code> (rojo).</li>
+            <li><b>HSL:</b> Ejemplo: <code>hsl(0, 100%, 50%)</code> (rojo).</li>
+        </ul>
+        <pre><code>p { color: blue; }</code></pre>
+        <p style="color: blue; font-size: 20px; font-weight: bold;">Este texto es azul</p>
+    
+        <h3>🖼️ 2.2. Propiedad <code>background-color</code></h3>
+        <p>Define el color de fondo de un elemento.</p>
+        <pre><code>div { background-color: #f0f0f0; }</code></pre>
+        <div style="background-color: #f0f0f0; padding: 20px; font-size: 18px; width: 300px; height: 100px;">Este es un fondo gris claro</div>
+    
+        <h3>📷 2.3. Imágenes de fondo con <code>background-image</code></h3>
+        <p>Se pueden usar imágenes como fondo.</p>
+        <pre><code>body { background-image: url('Visual_icon.svg.png'); }</code></pre>
+        <div style="background-image: url('Visual_icon.svg.png'); width: 500px; height: 500px; background-size: cover; border: 1px solid black;">Imagen de fondo</div>
+    
+        <h3>🔄 2.4. Control de repetición con <code>background-repeat</code></h3>
+        <p>Define cómo se repite la imagen de fondo.</p>
+        <ul>
+            <li><code>repeat</code> (predeterminado)</li>
+            <li><code>no-repeat</code> (sin repetición)</li>
+            <li><code>repeat-x</code> (solo horizontal)</li>
+            <li><code>repeat-y</code> (solo vertical)</li>
+        </ul>
+        <pre><code>div { background-repeat: no-repeat; }</code></pre>
+        <div style="background-image: url('Visual_icon.svg.png'); background-repeat: no-repeat; width: 500px; height: 500px; border: 1px solid black;">Fondo sin repetición</div>
+    
+        <h3>📏 2.5. Posición del fondo con <code>background-position</code></h3>
+        <p>Permite alinear la imagen de fondo dentro del elemento.</p>
+        <pre><code>div { background-position: center center; }</code></pre>
+        <div style="background-image: url('Visual_icon.svg.png'); background-position: center; width: 500px; height: 500px; background-repeat: no-repeat; border: 1px solid black;">Fondo centrado</div>
+    
+        <h3>🔳 2.6. Tamaño del fondo con <code>background-size</code></h3>
+        <p>Define el tamaño de la imagen de fondo.</p>
+        <ul>
+            <li><code>auto</code>: Tamaño original.</li>
+            <li><code>cover</code>: Ajusta la imagen para cubrir el área.</li>
+            <li><code>contain</code>: Ajusta la imagen sin recortarla.</li>
+        </ul>
+        <pre><code>div { background-size: cover; }</code></pre>
+        <div style="background-image: url('Visual_icon.svg.png'); background-size: contain; width: 500px; height: 500px; border: 1px solid black;">Fondo con contain</div>
+    
+        <h3>🎨 2.7. Fondos degradados con <code>background</code> y <code>linear-gradient</code></h3>
+        <p>CSS permite crear degradados como fondos.</p>
+        <pre><code>div { background: linear-gradient(to right, red, blue); }</code></pre>
+        <div style="background: linear-gradient(to right, rgb(236, 42, 42), rgb(251, 198, 63)); width: 300px; height: 100px; border: 1px solid black;">Fondo con degradado</div>
+    </section>
+
+    <section id="tipografias">
+        <h2>🔤 3. Tipografías y Estilos de Texto en CSS</h2>
+        <p>CSS permite personalizar las fuentes y la presentación del texto en una página web.</p>
+    
+        <h3>📜 Lista de propiedades de tipografía en CSS</h3>
+        <pre><code>font-family, font-size, font-style, font-weight, letter-spacing, line-height, 
+text-align, text-decoration, text-transform, text-indent, white-space, text-shadow</code></pre>
+    
+        <h3>📌 3.1. Propiedad <code>font-family</code></h3>
+        <p>Define la fuente del texto. Se recomienda incluir fuentes alternativas.</p>
+        <pre><code>p { font-family: Arial, sans-serif; }</code></pre>
+        <p style="font-family: Arial, sans-serif; font-size: 20px;">Este texto usa Arial.</p>
+    
+        <h3>🔠 3.2. Tamaño del texto con <code>font-size</code></h3>
+        <p>Define el tamaño del texto en píxeles (<code>px</code>), em o rem.</p>
+        <pre><code>h1 { font-size: 32px; }</code></pre>
+        <p style="font-size: 32px; font-weight: bold;">Texto de 32px</p>
+    
+        <h3>📝 3.3. Estilos de texto con <code>font-style</code> y <code>font-weight</code></h3>
+        <p>Permiten modificar la apariencia del texto.</p>
+        <ul>
+            <li><code>font-style</code>: <code>normal</code>, <code>italic</code>, <code>oblique</code>.</li>
+            <li><code>font-weight</code>: <code>normal</code>, <code>bold</code>, valores numéricos (100-900).</li>
+        </ul>
+        <pre><code>p { font-style: italic; font-weight: bold; }</code></pre>
+        <p style="font-style: italic; font-weight: bold;">Texto en negrita e itálica</p>
+    
+        <h3>📏 3.4. Espaciado con <code>letter-spacing</code> y <code>line-height</code></h3>
+        <p>Controla la separación entre letras y líneas de texto.</p>
+        <pre><code>p { letter-spacing: 2px; line-height: 1.5; }</code></pre>
+        <p style="letter-spacing: 2px; line-height: 1.5;">Este texto tiene más espacio entre letras y líneas.</p>
+    
+        <h3>📍 3.5. Alineación del texto con <code>text-align</code></h3>
+        <p>Define la alineación del texto dentro de un contenedor.</p>
+        <pre><code>p { text-align: center; }</code></pre>
+        <p style="text-align: center; font-weight: bold; border: 1px solid black; padding: 10px;">Texto centrado</p>
+    
+        <h3>✨ 3.6. Decoración con <code>text-decoration</code></h3>
+        <p>Se usa para subrayar, tachar o modificar el estilo del texto.</p>
+        <pre><code>a { text-decoration: none; }</code></pre>
+        <p><a href="#" style="text-decoration: none; font-weight: bold;">Enlace sin subrayado</a></p>
+    
+        <h3>🌟 3.7. Sombras en el texto con <code>text-shadow</code></h3>
+        <p>Permite agregar sombras y efectos al texto.</p>
+        <pre><code>h1 { text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); }</code></pre>
+        <p style="font-size: 24px; font-weight: bold; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);">Texto con sombra</p>
+    </section>
+
+    <section id="espaciado">
+        <h2>📏 4. Espaciado y Dimensiones en CSS</h2>
+        <p>CSS permite definir el tamaño de los elementos y controlar su espaciado.</p>
+    
+        <h3>📜 Lista de propiedades de espaciado y dimensiones en CSS</h3>
+        <pre><code>margin, padding, width, height, max-width, min-width, max-height, min-height, 
+box-sizing, overflow, display, visibility</code></pre>
+    
+        <h3>🛑 4.1. Margen exterior con <code>margin</code></h3>
+        <p>Controla el espacio entre un elemento y otros elementos.</p>
+        <pre><code>div { margin: 20px; }</code></pre>
+        <div style="margin: 20px; background: lightgray; padding: 10px;">Este div tiene un margen de 20px</div>
+    
+        <h3>📦 4.2. Espaciado interno con <code>padding</code></h3>
+        <p>Define el espacio dentro del borde del elemento.</p>
+        <pre><code>div { padding: 15px; }</code></pre>
+        <div style="padding: 15px; background: lightblue; border: 1px solid black;">Este div tiene un padding de 15px</div>
+    
+        <h3>📏 4.3. Ancho y alto con <code>width</code> y <code>height</code></h3>
+        <p>Establece el tamaño de un elemento.</p>
+        <pre><code>div { width: 300px; height: 200px; }</code></pre>
+        <div style="width: 300px; height: 200px; background: lightgreen; border: 1px solid black;">300x200px</div>
+    
+        <h3>⚠️ 4.4. Tamaño máximo y mínimo con <code>max-width</code>, <code>min-width</code>, <code>max-height</code>, <code>min-height</code></h3>
+        <p>Controla las dimensiones mínimas y máximas de un elemento.</p>
+        <pre><code>div { max-width: 500px; min-height: 100px; }</code></pre>
+        <div style="max-width: 500px; min-height: 100px; background: lightcoral; border: 1px solid black;">Este div tiene un máximo de 500px de ancho y un mínimo de 100px de alto</div>
+    
+        <h3>📦 4.5. Modelo de caja con <code>box-sizing</code></h3>
+        <p>Determina cómo se calculan las dimensiones de un elemento.</p>
+        <pre><code>div { box-sizing: border-box; }</code></pre>
+        <div style="width: 300px; height: 100px; padding: 20px; background: lightyellow; border: 5px solid black; box-sizing: border-box;">Este div usa box-sizing: border-box</div>
+    
+        <h3>🛠️ 4.6. Control de desbordamiento con <code>overflow</code></h3>
+        <p>Define qué sucede cuando el contenido de un elemento es más grande que su contenedor.</p>
+        <ul>
+            <li><code>visible</code>: El contenido sobresale.</li>
+            <li><code>hidden</code>: Se oculta el contenido desbordado.</li>
+            <li><code>scroll</code>: Agrega barras de desplazamiento.</li>
+            <li><code>auto</code>: Agrega barras de desplazamiento si es necesario.</li>
+        </ul>
+        <pre><code>div { overflow: auto; }</code></pre>
+        <div style="width: 300px; height: 100px; overflow: auto; background: lightgray; border: 1px solid black;">
+            Este div tiene contenido que sobrepasa el tamaño, por lo que se mostrará un scroll si es necesario. 
+            Sigue escribiendo para probar el desbordamiento y ver cómo se comporta con diferentes valores de overflow.
+        </div>
+    </section>
+
+    <section id="posicionamiento">
+        <h2>📌 5. Posicionamiento y Display en CSS</h2>
+        <p>CSS permite controlar la ubicación y el comportamiento de los elementos en la página.</p>
+    
+        <h3>📜 Lista de propiedades de posicionamiento y display en CSS</h3>
+        <pre><code>position, top, right, bottom, left, z-index, display, float, clear, visibility, 
+overflow, flex, justify-content, align-items, grid, grid-template-columns</code></pre>
+    
+        <h3>📍 5.1. Tipos de posicionamiento con <code>position</code></h3>
+        <p>Define cómo se coloca un elemento en la página.</p>
+        <ul>
+            <li><code>static</code>: Posición por defecto.</li>
+            <li><code>relative</code>: Se posiciona en relación con su posición original.</li>
+            <li><code>absolute</code>: Se posiciona en relación con su contenedor más cercano con <code>position: relative</code>.</li>
+            <li><code>fixed</code>: Se mantiene fijo en la pantalla, sin importar el desplazamiento.</li>
+            <li><code>sticky</code>: Se comporta como <code>relative</code> hasta alcanzar un punto de la pantalla y se fija.</li>
+        </ul>
+        <pre><code>div { position: absolute; top: 50px; left: 100px; }</code></pre>
+    
+        <h3>📏 5.2. Control de visibilidad con <code>z-index</code></h3>
+        <p>Define qué elemento está por encima de otro en el eje Z.</p>
+        <pre><code>div { position: absolute; z-index: 10; }</code></pre>
+        <div style="position: relative; z-index: 10; background: lightblue; padding: 10px;">Este div tiene z-index 10</div>
+    
+        <h3>🖼️ 5.3. Control de visualización con <code>display</code></h3>
+        <p>Determina cómo se comporta un elemento en la página.</p>
+        <ul>
+            <li><code>block</code>: Ocupa toda la anchura disponible.</li>
+            <li><code>inline</code>: Solo ocupa el espacio del contenido.</li>
+            <li><code>inline-block</code>: Como <code>inline</code>, pero permite definir ancho y alto.</li>
+            <li><code>none</code>: Oculta el elemento sin eliminarlo del DOM.</li>
+        </ul>
+        <pre><code>span { display: inline-block; width: 100px; }</code></pre>
+        <span style="display: inline-block; width: 100px; background: lightcoral; padding: 5px;">Span con inline-block</span>
+    
+        <h3>🔄 5.4. Alineación con <code>float</code> y <code>clear</code></h3>
+        <p>Permiten alinear elementos dentro de un contenedor.</p>
+        <pre><code>img { float: left; margin-right: 10px; }</code></pre>
+        <div>
+            <img src="Google_logo.svg.png" style="float: left; margin-right: 10px;">Este texto rodea la imagen flotante.
+        </div>
+    
+        <h3>📦 5.5. Control de flexibilidad con <code>flex</code></h3>
+        <p>Usado para distribuir elementos en una fila o columna de manera flexible.</p>
+        <pre><code>div { display: flex; justify-content: center; align-items: center; }</code></pre>
+        <div style="display: flex; justify-content: center; align-items: center; background: lightgreen; height: 100px;">
+            <span style="background: white; padding: 10px;">Centrado con flexbox</span>
+        </div>
+    
+        <h3>📐 5.6. Diseño de cuadrículas con <code>grid</code></h3>
+        <p>Permite organizar los elementos en filas y columnas.</p>
+        <pre><code>div { display: grid; grid-template-columns: repeat(3, 1fr); }</code></pre>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; background: lightyellow; padding: 10px;">
+            <div style="background: gray; padding: 10px;">1</div>
+            <div style="background: gray; padding: 10px;">2</div>
+            <div style="background: gray; padding: 10px;">3</div>
+        </div>
+    </section>
+
+    <section id="transformaciones">
+        <h2>🎭 6. Transformaciones y Transiciones en CSS</h2>
+        <p>CSS permite modificar la apariencia de los elementos con transformaciones y animaciones suaves con transiciones.</p>
+    
+        <h3>📜 Lista de propiedades de transformaciones y transiciones en CSS</h3>
+        <pre><code>transform, rotate, scale, skew, translate, transition, transition-property, 
+transition-duration, transition-timing-function, transition-delay</code></pre>
+    
+        <h3>🔄 6.1. Transformaciones con <code>transform</code></h3>
+        <p>Permiten cambiar la escala, rotación, inclinación o posición de un elemento.</p>
+        <ul>
+            <li><code>rotate(deg)</code>: Rota el elemento.</li>
+            <li><code>scale(x, y)</code>: Escala el elemento.</li>
+            <li><code>skew(x, y)</code>: Inclina el elemento.</li>
+            <li><code>translate(x, y)</code>: Mueve el elemento en el eje X e Y.</li>
+        </ul>
+        <pre><code>div { transform: rotate(45deg); }</code></pre>
+        <div style="width: 100px; height: 100px; background: lightblue; transform: rotate(45deg); display: flex; align-items: center; justify-content: center;">Rotado</div>
+    
+        <h3>🎨 6.2. Transiciones con <code>transition</code></h3>
+        <p>Permiten animaciones suaves cuando cambia una propiedad.</p>
+        <pre><code>button { transition: background-color 0.5s ease-in-out; }</code></pre>
+        <button style="padding: 10px; background: lightcoral; border: none; transition: background-color 0.5s ease-in-out;" onmouseover="this.style.background='red'" onmouseout="this.style.background='lightcoral'">Pasa el mouse</button>
+    
+        <h3>⏳ 6.3. Propiedades de <code>transition</code></h3>
+        <ul>
+            <li><b><code>transition-property</code>:</b> Propiedad a animar (ej. <code>opacity</code>).</li>
+            <li><b><code>transition-duration</code>:</b> Duración de la animación.</li>
+            <li><b><code>transition-timing-function</code>:</b> Velocidad de la animación (ej. <code>ease</code>, <code>linear</code>).</li>
+            <li><b><code>transition-delay</code>:</b> Retraso antes de iniciar.</li>
+        </ul>
+        <pre><code>div { transition: all 0.3s ease-in-out; }</code></pre>
+        <div style="width: 100px; height: 100px; background: lightgreen; transition: all 0.3s ease-in-out;" onmouseover="this.style.opacity='0.5'" onmouseout="this.style.opacity='1'">Pasa el mouse</div>
+    
+        <h3>✨ 6.4. Combinación de transformaciones y transiciones</h3>
+        <p>Podemos combinar ambos efectos para crear animaciones fluidas.</p>
+        <pre><code>div { 
+        transform: scale(1);
+        transition: transform 0.5s ease;
+    }
+    
+    div:hover {
+        transform: scale(1.2);
+    }</code></pre>
+        <div style="width: 100px; height: 100px; background: gold; display: flex; align-items: center; justify-content: center; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">Escalar</div>
+    </section>
+
+    <section id="pseudoclases">
+        <h2>🎭 7. Pseudoclases y Pseudoelementos en CSS</h2>
+        <p>Las pseudoclases y pseudoelementos permiten aplicar estilos dinámicos y manipular partes específicas de un elemento.</p>
+    
+        <h3>📜 Lista de pseudoclases y pseudoelementos en CSS</h3>
+        <pre><code>:hover, :focus, :nth-child(n), :first-child, :last-child, :not(selector),
+::before, ::after, ::first-letter, ::first-line, ::selection</code></pre>
+    
+        <h3>🔹 7.1. Pseudoclases</h3>
+        <p>Las pseudoclases aplican estilos a un elemento en un estado específico.</p>
+        <ul>
+            <li><code>:hover</code>: Aplica estilo cuando el usuario pasa el mouse.</li>
+            <li><code>:focus</code>: Se activa cuando un elemento recibe foco.</li>
+            <li><code>:nth-child(n)</code>: Aplica estilo al enésimo hijo de un contenedor.</li>
+            <li><code>:first-child</code> y <code>:last-child</code>: Seleccionan el primer o último hijo.</li>
+            <li><code>:not(selector)</code>: Excluye elementos que coincidan con el selector.</li>
+        </ul>
+        <pre><code>button:hover { background-color: blue; }</code></pre>
+        <button style="padding: 10px; background: lightcoral; border: none; transition: background-color 0.5s ease-in-out;" onmouseover="this.style.background='blue'" onmouseout="this.style.background='lightcoral'">Pasa el mouse</button>
+    
+        <h3>🎨 7.2. Pseudoelementos</h3>
+        <p>Los pseudoelementos permiten aplicar estilos a partes específicas de un elemento.</p>
+        <ul>
+            <li><code>::before</code>: Inserta contenido antes del elemento.</li>
+            <li><code>::after</code>: Inserta contenido después del elemento.</li>
+            <li><code>::first-letter</code>: Aplica estilo a la primera letra.</li>
+            <li><code>::first-line</code>: Aplica estilo a la primera línea de un párrafo.</li>
+            <li><code>::selection</code>: Define el estilo del texto seleccionado por el usuario.</li>
+        </ul>
+        <pre><code>p::first-letter { font-size: 2em; font-weight: bold; }</code></pre>
+        <p style="font-size: 16px;"><span style="font-size: 2em; font-weight: bold;">E</span>jemplo de pseudoelemento ::first-letter aplicado.</p>
+    
+        <h3>🛠️ 7.3. Ejemplo combinado</h3>
+        <p>Podemos combinar pseudoclases y pseudoelementos para obtener efectos avanzados.</p>
+        <pre><code>a:hover::after { content: ' 🔗'; color: red; }</code></pre>
+        <a href="#" style="color: blue; text-decoration: none; position: relative;">Enlace interactivo</a>
+    </section>
+    
+    <section id="variables">
+        <h2>🌈 8. Variables CSS y Custom Properties</h2>
+        <p>Las variables CSS (también llamadas <b>Custom Properties</b>) permiten almacenar valores reutilizables en toda la hoja de estilos.</p>
+    
+        <h3>📜 Lista de propiedades relacionadas con variables CSS</h3>
+        <pre><code>:root, --nombre-variable, var(), setProperty()</code></pre>
+    
+        <h3>🎯 8.1. Declaración de Variables</h3>
+        <p>Las variables CSS se definen con <code>--nombre-variable</code> dentro de <code>:root</code> para usarlas globalmente.</p>
+        <pre><code>:root {
+        --color-primario: #3498db;
+        --tamano-texto: 16px;
+    }</code></pre>
+        <div style="background-color: var(--color-primario, #3498db); padding: 10px; color: white;">Este div usa una variable CSS</div>
+    
+        <h3>🎨 8.2. Uso de Variables</h3>
+        <p>Para usar una variable, se emplea la función <code>var()</code>.</p>
+        <pre><code>h1 {
+        color: var(--color-primario);
+        font-size: var(--tamano-texto);
+    }</code></pre>
+        <h1 style="color: var(--color-primario, #3498db); font-size: var(--tamano-texto, 16px);">Título con variable CSS</h1>
+    
+        <h3>🔄 8.3. Variables en Elementos Específicos</h3>
+        <p>Las variables también pueden definirse dentro de elementos específicos.</p>
+        <pre><code>button {
+        --btn-color: #e74c3c;
+        background-color: var(--btn-color);
+    }</code></pre>
+        <button style="--btn-color: #e74c3c; background-color: var(--btn-color); color: white; padding: 10px; border: none;">Botón con variable CSS</button>
+    
+        <h3>🛠️ 8.4. Valores Predeterminados</h3>
+        <p>Si una variable no está definida, <code>var()</code> permite asignar un valor por defecto.</p>
+        <pre><code>p {
+        color: var(--color-secundario, #2ecc71);
+    }</code></pre>
+        <p style="color: var(--color-secundario, #2ecc71);">Este párrafo usa un valor predeterminado</p>
+    
+        <h3>⚡ 8.5. Variables Dinámicas con JavaScript</h3>
+        <p>Las variables CSS pueden modificarse dinámicamente con JavaScript.</p>
+        <pre><code>document.documentElement.style.setProperty('--color-primario', 'purple');</code></pre>
+        <button onclick="document.documentElement.style.setProperty('--color-primario', 'purple');" style="padding: 10px;">Cambiar Color</button>
+    </section>
+    
+    <section id="responsive">
+        <h2>📱 9. Responsive Design en CSS</h2>
+        <p>El diseño responsive permite adaptar la apariencia de una página a diferentes dispositivos y tamaños de pantalla.</p>
+    
+        <h3>📜 Lista de técnicas para diseño responsive en CSS</h3>
+        <pre><code>@media, flex-wrap, grid-template-columns, vw, vh, max-width, min-width, viewport</code></pre>
+    
+        <h3>📏 9.1. Uso de Media Queries</h3>
+        <p>Las <code>@media</code> queries permiten aplicar estilos según el ancho de la pantalla.</p>
+        <pre><code>@media (max-width: 768px) {
+        body {
+            background-color: lightgray;
+        }
+    }</code></pre>
+        <div style="background: lightblue; padding: 20px; text-align: center;">Redimensiona la ventana para ver el efecto</div>
+    
+        <h3>🔹 9.2. Unidades Relativas</h3>
+        <p>Usar <code>em</code>, <code>rem</code>, <code>vw</code> y <code>vh</code> en lugar de <code>px</code> facilita la adaptación.</p>
+        <pre><code>h1 {
+        font-size: 5vw; /* Tamaño relativo al ancho de la pantalla */
+    }</code></pre>
+        <h1 style="font-size: 5vw;">Este título cambia de tamaño según el ancho de la pantalla</h1>
+    
+        <h3>📐 9.3. Diseño Flexible con Flexbox</h3>
+        <p>Flexbox facilita la adaptación de los elementos.</p>
+        <pre><code>.contenedor {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }</code></pre>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+            <div style="background: lightcoral; padding: 20px;">Elemento 1</div>
+            <div style="background: lightgreen; padding: 20px;">Elemento 2</div>
+            <div style="background: lightblue; padding: 20px;">Elemento 3</div>
+        </div>
+    
+        <h3>📊 9.4. Diseño en Cuadrícula con CSS Grid</h3>
+        <p>Grid Layout permite reorganizar elementos según el tamaño de pantalla.</p>
+        <pre><code>.grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }</code></pre>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;">
+            <div style="background: lightyellow; padding: 20px;">Caja 1</div>
+            <div style="background: lightpink; padding: 20px;">Caja 2</div>
+            <div style="background: lightgray; padding: 20px;">Caja 3</div>
+        </div>
+    
+        <h3>📌 9.5. Imágenes Responsivas</h3>
+        <p>Las imágenes pueden ajustarse automáticamente al tamaño del contenedor.</p>
+        <pre><code>img {
+        max-width: 100%;
+        height: auto;
+    }</code></pre>
+        <img src="Google_logo.svg.png" style="max-width: 100%; height: auto; border: 1px solid black;">
+    
+        <h3>📳 9.6. Meta Viewport</h3>
+        <p>El siguiente meta permite que la página se adapte a dispositivos móviles.</p>
+        <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+        <p style="background: lightgray; padding: 10px;">Este meta ayuda a escalar correctamente el diseño en dispositivos móviles.</p>
+    </section>
+
+    <footer>
+        <p>© 2024 Guía de CSS - Todos los derechos reservados. | <a href="📖 Guía Completa de HTML.html">Ir a Guía de HTML</a></p>
+    </footer>
+
+    <script src="SCRIPT-CSS.Js"></script>
+</body>
+</html>

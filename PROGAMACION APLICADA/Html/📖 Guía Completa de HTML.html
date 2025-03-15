@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guía completa de etiquetas HTML con ejemplos detallados.">
+    <meta name="keywords" content="HTML, etiquetas, guía, tutorial">
+    <meta name="author" content="Tu Nombre">
+    <title>Guía Completa de Etiquetas HTML</title>
+    <link rel="stylesheet" href="DISEÑO-HTML.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- 🔹 Barra de navegación fija -->
+    <nav class="navbar">
+        <a href="#estructura">Estructura</a>
+        <a href="#texto">Texto</a>
+        <a href="#atributos">Atributos</a>
+        <a href="#enlaces">Enlaces</a>
+        <a href="#listas">Listas</a>
+        <a href="#tablas">Tablas</a>
+        <a href="#formularios">Formularios</a>
+        <a href="#multimedia">Multimedia</a>
+        <a href="#interactivos">Interactivos</a>
+        <a href="#meta">Metadatos</a>
+        <a href="#accesibilidad">Accesibilidad</a>
+        <a href="📖 Guía Completa de CSS.html" class="navbar-logo">Guía CSS</a>
+    </nav>
+
+    <header>
+        <h1>📖 Guía Completa de HTML</h1>
+        <p>Explora todas las etiquetas HTML con ejemplos prácticos y avanzados.</p>
+    </header>
+
+    <!-- 🌟 Secciones con Identificadores -->
+    <section id="estructura">
+        <h2>📌 1. Etiquetas de estructura</h2>
+        <p>Estas etiquetas definen la base de una página web y ayudan a organizar el contenido semánticamente.</p>
+    
+        <h3>📜 Lista de etiquetas de estructura</h3>
+        <pre><code>&lt;html&gt;, &lt;head&gt;, &lt;body&gt;, &lt;header&gt;, &lt;footer&gt;, &lt;main&gt;, &lt;section&gt;, &lt;article&gt;, &lt;nav&gt;, 
+    &lt;aside&gt;, &lt;div&gt;, &lt;address&gt;, &lt;figure&gt;, &lt;figcaption&gt;, &lt;summary&gt;, &lt;details&gt;, 
+    &lt;dialog&gt;, &lt;template&gt;, &lt;fieldset&gt;, &lt;legend&gt;</code></pre>
+    
+        <h3>🌍 1.1. <code>&lt;html&gt;</code> - Documento raíz</h3>
+        <p>La etiqueta <code>&lt;html&gt;</code> encapsula todo el contenido de la página web.</p>
+        <pre><code>&lt;!DOCTYPE html&gt;
+    &lt;html lang="es"&gt;
+        &lt;head&gt;
+            &lt;title&gt;Ejemplo de HTML&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;Hola, Mundo&lt;/h1&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;</code></pre>
+    
+        <h3>🧠 1.2. <code>&lt;head&gt;</code> - Información del documento</h3>
+        <p>Contiene metadatos, enlaces a CSS, scripts y el título de la página.</p>
+        <pre><code>&lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;Ejemplo de Head&lt;/title&gt;
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+        &lt;script src="script.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;</code></pre>
+    
+        <h3>📄 1.3. <code>&lt;body&gt;</code> - Contenido principal</h3>
+        <p>Todo el contenido visible de la página va dentro de esta etiqueta.</p>
+        <pre><code>&lt;body&gt;
+        &lt;h1&gt;Bienvenido a mi página&lt;/h1&gt;
+        &lt;p&gt;Este es un contenido de ejemplo&lt;/p&gt;
+    &lt;/body&gt;</code></pre>
+    
+        <h3>🔝 1.4. <code>&lt;header&gt;</code> - Encabezado</h3>
+        <p>Define el encabezado de una página o sección.</p>
+        <pre><code>&lt;header&gt;
+        &lt;h1&gt;Mi Blog&lt;/h1&gt;
+        &lt;nav&gt;
+            &lt;a href="#home"&gt;Inicio&lt;/a&gt;
+            &lt;a href="#about"&gt;Sobre mí&lt;/a&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;</code></pre>
+    
+        <h3>🔚 1.5. <code>&lt;footer&gt;</code> - Pie de página</h3>
+        <p>Ubicado en la parte inferior, contiene información de contacto, derechos de autor, etc.</p>
+        <pre><code>&lt;footer&gt;
+        &lt;p&gt;&copy; 2025 Mi Sitio Web&lt;/p&gt;
+        &lt;address&gt;Contacto: &lt;a href="mailto:info@misitio.com"&gt;info@misitio.com&lt;/a&gt;&lt;/address&gt;
+    &lt;/footer&gt;</code></pre>
+    
+        <h3>📌 1.6. <code>&lt;main&gt;</code> - Contenido principal</h3>
+        <p>Contiene el contenido más importante de la página.</p>
+        <pre><code>&lt;main&gt;
+        &lt;section&gt;
+            &lt;h2&gt;Noticias recientes&lt;/h2&gt;
+            &lt;article&gt;
+                &lt;h3&gt;Título de la noticia&lt;/h3&gt;
+                &lt;p&gt;Contenido de la noticia...&lt;/p&gt;
+            &lt;/article&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;</code></pre>
+    
+        <h3>📌 1.7. <code>&lt;section&gt;</code> - Sección</h3>
+        <p>Agrupa contenido relacionado dentro de la página.</p>
+        <pre><code>&lt;section&gt;
+        &lt;h2&gt;Servicios&lt;/h2&gt;
+        &lt;p&gt;Ofrecemos desarrollo web y marketing digital.&lt;/p&gt;
+    &lt;/section&gt;</code></pre>
+    
+        <h3>📝 1.8. <code>&lt;article&gt;</code> - Artículo</h3>
+        <p>Se usa para contenido independiente como blogs o noticias.</p>
+        <pre><code>&lt;article&gt;
+        &lt;h2&gt;Cómo aprender HTML&lt;/h2&gt;
+        &lt;p&gt;HTML es el lenguaje base de la web...&lt;/p&gt;
+    &lt;/article&gt;</code></pre>
+    
+        <h3>🔗 1.9. <code>&lt;nav&gt;</code> - Navegación</h3>
+        <p>Contiene enlaces de navegación.</p>
+        <pre><code>&lt;nav&gt;
+        &lt;a href="#home"&gt;Inicio&lt;/a&gt;
+        &lt;a href="#services"&gt;Servicios&lt;/a&gt;
+    &lt;/nav&gt;</code></pre>
+    
+        <h3>📑 1.10. <code>&lt;aside&gt;</code> - Contenido adicional</h3>
+        <p>Ideal para barras laterales con contenido complementario.</p>
+        <pre><code>&lt;aside&gt;
+        &lt;h2&gt;Publicidad&lt;/h2&gt;
+        &lt;p&gt;Compra ahora y obtén un descuento&lt;/p&gt;
+    &lt;/aside&gt;</code></pre>
+    
+        <h3>📦 1.11. <code>&lt;div&gt;</code> - Contenedor genérico</h3>
+        <pre><code>&lt;div class="contenedor"&gt;
+        &lt;p&gt;Este es un contenedor sin significado semántico.&lt;/p&gt;
+    &lt;/div&gt;</code></pre>
+    
+        <h3>🖼 1.12. <code>&lt;figure&gt;</code> y <code>&lt;figcaption&gt;</code> - Imágenes con descripción</h3>
+        <pre><code>&lt;figure&gt;
+        &lt;img src="imagen.jpg" alt="Descripción de la imagen"&gt;
+        &lt;figcaption&gt;Esta es la descripción de la imagen&lt;/figcaption&gt;
+    &lt;/figure&gt;</code></pre>
+    
+        <h3>🔍 1.13. <code>&lt;details&gt;</code> y <code>&lt;summary&gt;</code> - Contenido expandible</h3>
+        <pre><code>&lt;details&gt;
+        &lt;summary&gt;Haz clic para más información&lt;/summary&gt;
+        &lt;p&gt;Aquí hay más contenido oculto&lt;/p&gt;
+    &lt;/details&gt;</code></pre>
+    
+        <h3>💬 1.14. <code>&lt;dialog&gt;</code> - Cuadro de diálogo</h3>
+        <pre><code>&lt;dialog id="modal"&gt;
+        &lt;p&gt;Este es un cuadro de diálogo.&lt;/p&gt;
+        &lt;button onclick="document.getElementById('modal').close()"&gt;Cerrar&lt;/button&gt;
+    &lt;/dialog&gt;
+    &lt;button onclick="document.getElementById('modal').showModal()"&gt;Abrir diálogo&lt;/button&gt;</code></pre>
+    
+        <h3>📄 1.15. <code>&lt;template&gt;</code> - Plantilla reutilizable</h3>
+        <pre><code>&lt;template id="tarjeta"&gt;
+        &lt;div class="card"&gt;
+            &lt;h3&gt;Título de la tarjeta&lt;/h3&gt;
+            &lt;p&gt;Descripción breve.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/template&gt;</code></pre>
+    
+    </section>
+    
+    <section id="texto">
+        <h2>📝 2. Etiquetas de texto</h2>
+        <p>Estas etiquetas permiten dar formato y estructura al contenido textual dentro de una página web.</p>
+
+        <h3>📜 Lista de etiquetas de texto</h3>
+    <pre><code>&lt;p&gt;, &lt;h1&gt;-&lt;h6&gt;, &lt;strong&gt;, &lt;em&gt;, &lt;u&gt;, &lt;small&gt;, &lt;mark&gt;, 
+&lt;del&gt;, &lt;ins&gt;, &lt;blockquote&gt;, &lt;abbr&gt;, &lt;q&gt;, &lt;cite&gt;, &lt;code&gt;, 
+&lt;kbd&gt;, &lt;samp&gt;, &lt;var&gt;, &lt;hr&gt;</code></pre>
+    
+        <h3>📌 Ejemplos de cada etiqueta</h3>
+    
+        <h3>📜 2.1. Párrafo <code>&lt;p&gt;</code></h3>
+        <p>Ejemplo:</p>
+        <p>Este es un párrafo de ejemplo.</p>
+        <pre><code>&lt;p&gt;Este es un párrafo de ejemplo.&lt;/p&gt;</code></pre>
+    
+        <h3>🔠 2.2. Encabezados <code>&lt;h1&gt; - &lt;h6&gt;</code></h3>
+        <p>Ejemplo:</p>
+        <h1>Encabezado 1</h1>
+        <h2>Encabezado 2</h2>
+        <h3>Encabezado 3</h3>
+        <h4>Encabezado 4</h4>
+        <h5>Encabezado 5</h5>
+        <h6>Encabezado 6</h6>
+        <pre><code>&lt;h1&gt;Encabezado 1&lt;/h1&gt;
+    &lt;h2&gt;Encabezado 2&lt;/h2&gt;
+    &lt;h3&gt;Encabezado 3&lt;/h3&gt;
+    &lt;h4&gt;Encabezado 4&lt;/h4&gt;
+    &lt;h5&gt;Encabezado 5&lt;/h5&gt;
+    &lt;h6&gt;Encabezado 6&lt;/h6&gt;</code></pre>
+    
+        <h3>💪 2.3. Negrita <code>&lt;strong&gt;</code></h3>
+        <p>Ejemplo:</p>
+        <p>Este es un texto <strong>importante</strong>.</p>
+        <pre><code>&lt;p&gt;Este es un texto &lt;strong&gt;importante&lt;/strong&gt;.&lt;/p&gt;</code></pre>
+    
+        <h3>✨ 2.4. Cursiva <code>&lt;em&gt;</code></h3>
+        <p>Ejemplo:</p>
+        <p>Este es un texto <em>enfatizado</em>.</p>
+        <pre><code>&lt;p&gt;Este es un texto &lt;em&gt;enfatizado&lt;/em&gt;.&lt;/p&gt;</code></pre>
+    
+        <h3>🔽 2.5. Subrayado <code>&lt;u&gt;</code></h3>
+        <p>Ejemplo:</p>
+        <p>Este es un texto <u>subrayado</u>.</p>
+        <pre><code>&lt;p&gt;Este es un texto &lt;u&gt;subrayado&lt;/u&gt;.&lt;/p&gt;</code></pre>
+    
+        <h3>🔍 2.6. Pequeño <code>&lt;small&gt;</code></h3>
+        <p>Ejemplo:</p>
+        <p>Este es un texto <small>pequeño</small>.</p>
+        <pre><code>&lt;p&gt;Este es un texto &lt;small&gt;pequeño&lt;/small&gt;.&lt;/p&gt;</code></pre>
+    
+        <h3>🖍 2.7. Resaltado <code>&lt;mark&gt;</code></h3>
+        <p>Ejemplo:</p>
+        <p>Este es un texto <mark>resaltado</mark>.</p>
+        <pre><code>&lt;p&gt;Este es un texto &lt;mark&gt;resaltado&lt;/mark&gt;.&lt;/p&gt;</code></pre>
+    
+        <h3>❌ 2.8. Tachado <code>&lt;del&gt;</code></h3>
+        <p>Ejemplo:</p>
+        <p>Este es un texto <del>eliminado</del>.</p>
+        <pre><code>&lt;p&gt;Este es un texto &lt;del&gt;eliminado&lt;/del&gt;.&lt;/p&gt;</code></pre>
+    
+        <h3>➕ 2.9. Insertado <code>&lt;ins&gt;</code></h3>
+        <p>Ejemplo:</p>
+        <p>Este es un texto <ins>insertado</ins>.</p>
+        <pre><code>&lt;p&gt;Este es un texto &lt;ins&gt;insertado&lt;/ins&gt;.&lt;/p&gt;</code></pre>
+    
+        <h3>💬 2.10. Cita en bloque <code>&lt;blockquote&gt;</code></h3>
+        <p>Ejemplo:</p>
+        <blockquote>La educación es el arma más poderosa que puedes usar para cambiar el mundo.</blockquote>
+        <pre><code>&lt;blockquote&gt;
+    La educación es el arma más poderosa que puedes usar para cambiar el mundo.
+    &lt;/blockquote&gt;</code></pre>
+    
+        <h3>📌 2.11. Cita corta <code>&lt;q&gt;</code></h3>
+        <p>Ejemplo:</p>
+        <p>Einstein dijo: <q>La imaginación es más importante que el conocimiento</q>.</p>
+        <pre><code>&lt;p&gt;Einstein dijo: &lt;q&gt;La imaginación es más importante que el conocimiento&lt;/q&gt;.&lt;/p&gt;</code></pre>
+    
+        <h3>📖 2.12. Referencia <code>&lt;cite&gt;</code></h3>
+        <p>Ejemplo:</p>
+        <p>Leí <cite>El Quijote</cite> el año pasado.</p>
+        <pre><code>&lt;p&gt;Leí &lt;cite&gt;El Quijote&lt;/cite&gt; el año pasado.&lt;/p&gt;</code></pre>
+    
+        <h3>🖥 2.13. Código <code>&lt;code&gt;</code></h3>
+        <p>Ejemplo:</p>
+        <p>Ejemplo de código: <code>console.log('Hola')</code>.</p>
+        <pre><code>&lt;p&gt;Ejemplo de código: &lt;code&gt;console.log('Hola')&lt;/code&gt;.&lt;/p&gt;</code></pre>
+    
+        <h3>⌨️ 2.14. Entrada de teclado <code>&lt;kbd&gt;</code></h3>
+        <p>Ejemplo:</p>
+        <p>Presiona <kbd>Ctrl + C</kbd> para copiar.</p>
+        <pre><code>&lt;p&gt;Presiona &lt;kbd&gt;Ctrl + C&lt;/kbd&gt; para copiar.&lt;/p&gt;</code></pre>
+    
+        <h3>📊 2.15. Salida de un programa <code>&lt;samp&gt;</code></h3>
+        <p>Ejemplo:</p>
+        <p>El sistema respondió: <samp>Error 404</samp>.</p>
+        <pre><code>&lt;p&gt;El sistema respondió: &lt;samp&gt;Error 404&lt;/samp&gt;.&lt;/p&gt;</code></pre>
+    
+        <h3>🔢 2.16. Variable <code>&lt;var&gt;</code></h3>
+        <p>Ejemplo:</p>
+        <p>La ecuación de la recta es <var>y = mx + b</var>.</p>
+        <pre><code>&lt;p&gt;La ecuación de la recta es &lt;var&gt;y = mx + b&lt;/var&gt;.&lt;/p&gt;</code></pre>
+    
+        <h3>📏 2.17. Línea horizontal <code>&lt;hr&gt;</code></h3>
+        <p>Ejemplo:</p>
+        <hr>
+        <pre><code>&lt;hr&gt;</code></pre>
+    
+    </section>
+    
+    <section id="atributos">
+        <h2>⚙️ 3. Atributos en HTML</h2>
+        <p>Los atributos proporcionan información adicional sobre los elementos HTML y modifican su comportamiento.</p>
+    
+        <h3>📜 Lista de atributos comunes</h3>
+        <pre><code>
+    id, class, style, title, lang, dir, hidden, tabindex, accesskey, draggable, contenteditable,
+    src, alt, href, target, download, rel, type, value, placeholder, disabled, readonly, checked,
+    selected, multiple, name, action, method, enctype, autocomplete, required, pattern, minlength, maxlength,
+    step, autofocus, spellcheck, wrap, cols, rows, size, for, defer, async, crossorigin, charset, 
+    http-equiv, name, sandbox, referrerpolicy, loading
+        </code></pre>
+        
+        <h3>🆔 3.1. Identificadores con <code>id</code></h3>
+        <p>El atributo <code>id</code> asigna un identificador único a un elemento, permitiendo aplicarle estilos y seleccionarlo con JavaScript.</p>
+        <pre><code>&lt;p id="ejemplo-id"&gt;Este párrafo tiene un ID.&lt;/p&gt;</code></pre>
+        <p id="ejemplo-id">Este párrafo tiene un ID.</p>
+        <style>
+        #ejemplo-id { color: blue; font-weight: bold; font-size: 18px; }
+        </style>
+        
+        <h3>🎨 3.2. Clases con <code>class</code></h3>
+        <p>El atributo <code>class</code> permite aplicar estilos a varios elementos.</p>
+        <pre><code>&lt;p class="ejemplo-clase"&gt;Este texto usa una clase.&lt;/p&gt;</code></pre>
+        <p class="ejemplo-clase">Este texto usa una clase.</p>
+        <p class="ejemplo-clase">Otro párrafo con la misma clase.</p>
+        <style>
+        .ejemplo-clase { color: red; font-size: 18px; border: 1px solid black; padding: 5px; }
+        </style>
+        
+        <h3>🎭 3.3. Estilos con <code>style</code></h3>
+        <p>El atributo <code>style</code> define estilos directamente en el elemento.</p>
+        <pre><code>&lt;p style="color: green; font-size: 20px;"&gt;Texto con estilos en línea.&lt;/p&gt;</code></pre>
+        <p style="color: green; font-size: 20px;">Texto con estilos en línea.</p>
+        
+        <h3>ℹ️ 3.4. Descripción emergente con <code>title</code></h3>
+        <p>El atributo <code>title</code> muestra un mensaje emergente al pasar el mouse sobre el elemento.</p>
+        <pre><code>&lt;p title="Este es un tooltip"&gt;Pasa el mouse sobre este texto.&lt;/p&gt;</code></pre>
+        <p title="Este es un tooltip" style="border-bottom: 1px dashed black;">Pasa el mouse sobre este texto.</p>
+        
+        <h3>🌍 3.5. Idioma con <code>lang</code></h3>
+        <p>El atributo <code>lang</code> indica el idioma del contenido.</p>
+        <pre><code>&lt;p lang="es"&gt;Este párrafo está en español.&lt;/p&gt;
+        &lt;p lang="fr"&gt;Ce paragraphe est en français.&lt;/p&gt;</code></pre>
+        <p lang="es">Este párrafo está en español.</p>
+        <p lang="fr">Ce paragraphe est en français.</p>
+        
+        <h3>📐 3.6. Dirección del texto con <code>dir</code></h3>
+        <p>El atributo <code>dir</code> controla la dirección del texto.</p>
+        <pre><code>&lt;p dir="rtl"&gt;Este texto se alinea de derecha a izquierda.&lt;/p&gt;</code></pre>
+        <p dir="rtl" style="border: 1px solid black; padding: 5px;">Este texto se alinea de derecha a izquierda.</p>
+        
+        <h3>🙈 3.7. Ocultar elementos con <code>hidden</code></h3>
+        <p>El atributo <code>hidden</code> oculta un elemento sin eliminarlo del DOM.</p>
+        <pre><code>&lt;p hidden&gt;Este texto está oculto.&lt;/p&gt;</code></pre>
+        <p hidden>Este texto está oculto.</p>
+        
+        <h3>🔢 3.8. Orden de navegación con <code>tabindex</code></h3>
+        <p>El atributo <code>tabindex</code> define el orden en que los elementos reciben el foco al presionar "Tab".</p>
+        <pre><code>&lt;input type="text" tabindex="2" placeholder="Segundo campo"&gt;
+        &lt;input type="text" tabindex="1" placeholder="Primer campo"&gt;</code></pre>
+        <input type="text" tabindex="2" placeholder="Segundo campo">
+        <input type="text" tabindex="1" placeholder="Primer campo">
+        
+        <h3>⌨️ 3.9. Atajos de teclado con <code>accesskey</code></h3>
+        <p>El atributo <code>accesskey</code> permite asignar un atajo de teclado.</p>
+        <pre><code>&lt;p accesskey="h"&gt;Presiona "Alt + H" para enfocar este texto.&lt;/p&gt;</code></pre>
+        <p accesskey="h" style="border: 1px solid black; padding: 5px;">Presiona "Alt + H" para acceder rápidamente.</p>
+        
+        <h3>🖱️ 3.10. Elementos arrastrables con <code>draggable</code></h3>
+        <p>El atributo <code>draggable</code> define si un elemento puede ser arrastrado.</p>
+        <pre><code>&lt;img src="https://via.placeholder.com/100" draggable="true" alt="Imagen arrastrable"&gt;</code></pre>
+        <img src="Google_logo.svg.png" draggable="true" alt="Imagen arrastrable" style="border: 1px solid black;">
+        
+        <h3>✍️ 3.11. Contenido editable con <code>contenteditable</code></h3>
+        <p>El atributo <code>contenteditable</code> hace que un elemento sea editable.</p>
+        <pre><code>&lt;p contenteditable="true"&gt;Haz clic aquí y edita este texto.&lt;/p&gt;</code></pre>
+        <p contenteditable="true" style="border: 1px solid black; padding: 5px;">Haz clic aquí y edita este texto.</p>
+    
+        <h3>🎥 3.12. Ruta de archivos multimedia con <code>src</code></h3>
+        <p>El atributo <code>src</code> define la ubicación de imágenes, audios y videos.</p>
+        <pre><code>&lt;img src="https://via.placeholder.com/150" alt="Imagen de prueba"&gt;</code></pre>
+        <img src="Google_logo.svg.png" alt="Imagen de prueba" style="border: 1px solid black;">
+    
+        <h3>🖼️ 3.13. Texto alternativo con <code>alt</code></h3>
+        <p>El atributo <code>alt</code> proporciona una descripción en caso de que la imagen no se cargue.</p>
+        <pre><code>&lt;img src="imagen-no-existe.jpg" alt="Imagen alternativa"&gt;</code></pre>
+        <img src="imagen-no-existe.jpg" alt="Imagen alternativa" style="border: 1px solid black;">
+    
+        <h3>🔗 3.14. Enlaces con <code>href</code></h3>
+        <p>El atributo <code>href</code> especifica la dirección a la que apunta un enlace.</p>
+        <pre><code>&lt;a href="https://www.google.com"&gt;Ir a Google&lt;/a&gt;</code></pre>
+        <a href="https://www.google.com" target="_blank">Ir a Google</a>
+    
+        <h3>🌍 3.15. Control de apertura de enlaces con <code>target</code></h3>
+        <p>El atributo <code>target</code> define cómo se abrirá un enlace (<code>_blank</code> para nueva pestaña).</p>
+        <pre><code>&lt;a href="https://www.google.com" target="_blank"&gt;Abrir en nueva pestaña&lt;/a&gt;</code></pre>
+        <a href="https://www.google.com" target="_blank">Abrir en nueva pestaña</a>
+    
+        <h3>📥 3.16. Descarga de archivos con <code>download</code></h3>
+        <p>El atributo <code>download</code> permite que el enlace descargue un archivo en lugar de abrirlo.</p>
+        <pre><code>&lt;a href="https://via.placeholder.com/150" download&gt;Descargar imagen&lt;/a&gt;</code></pre>
+        <a href="Google_logo.svg.png" download>Descargar imagen</a>
+    
+        <h3>🔗 3.17. Relación entre documentos con <code>rel</code></h3>
+        <p>El atributo <code>rel</code> define la relación entre la página actual y el enlace.</p>
+        <pre><code>&lt;a href="https://www.ejemplo.com" rel="noopener noreferrer"&gt;Enlace seguro&lt;/a&gt;</code></pre>
+        <a href="https://www.ejemplo.com" rel="noopener noreferrer" target="_blank">Enlace seguro</a>
+    
+        <h3>📝 3.18. Tipo de entrada en formularios con <code>type</code></h3>
+        <p>El atributo <code>type</code> define el tipo de campo en un formulario.</p>
+        <pre><code>&lt;input type="email" placeholder="Correo electrónico"&gt;</code></pre>
+        <input type="email" placeholder="Correo electrónico">
+    
+        <h3>📌 3.19. Valor predeterminado en formularios con <code>value</code></h3>
+        <p>El atributo <code>value</code> define el valor inicial de un campo.</p>
+        <pre><code>&lt;input type="text" value="Texto por defecto"&gt;</code></pre>
+        <input type="text" value="Texto por defecto">
+    
+        <h3>💡 3.20. Texto de ayuda con <code>placeholder</code></h3>
+        <p>El atributo <code>placeholder</code> muestra un texto de ayuda en un campo.</p>
+        <pre><code>&lt;input type="text" placeholder="Escribe tu nombre"&gt;</code></pre>
+        <input type="text" placeholder="Escribe tu nombre">
+    
+        <h3>🚫 3.21. Desactivar un campo con <code>disabled</code></h3>
+        <p>El atributo <code>disabled</code> hace que el usuario no pueda interactuar con el campo.</p>
+        <pre><code>&lt;input type="text" disabled value="No editable"&gt;</code></pre>
+        <input type="text" disabled value="No editable">
+    
+        <h3>🔒 3.22. Solo lectura con <code>readonly</code></h3>
+        <p>El atributo <code>readonly</code> hace que el usuario pueda ver pero no modificar el valor.</p>
+        <pre><code>&lt;input type="text" readonly value="Solo lectura"&gt;</code></pre>
+        <input type="text" readonly value="Solo lectura">    
+    
+        <h3>✅ 3.23. Casilla marcada por defecto con <code>checked</code></h3>
+        <p>El atributo <code>checked</code> marca automáticamente un checkbox o un radio button.</p>
+        <pre><code>&lt;input type="checkbox" checked&gt; Acepto los términos</code></pre>
+        <input type="checkbox" checked> Acepto los términos
+    
+        <h3>🔘 3.24. Opción seleccionada por defecto con <code>selected</code></h3>
+        <p>El atributo <code>selected</code> marca una opción por defecto en un select.</p>
+        <pre><code>&lt;select&gt;
+        &lt;option selected&gt;Opción 1&lt;/option&gt;
+        &lt;option&gt;Opción 2&lt;/option&gt;
+        &lt;/select&gt;</code></pre>
+        <select>
+            <option selected>Opción 1</option>
+            <option>Opción 2</option>
+        </select>
+    
+        <h3>📋 3.25. Selección múltiple con <code>multiple</code></h3>
+        <p>El atributo <code>multiple</code> permite seleccionar varias opciones en un select.</p>
+        <pre><code>&lt;select multiple&gt;
+        &lt;option&gt;Opción 1&lt;/option&gt;
+        &lt;option&gt;Opción 2&lt;/option&gt;
+        &lt;/select&gt;</code></pre>
+        <select multiple>
+            <option>Opción 1</option>
+            <option>Opción 2</option>
+            <option>Opción 3</option>
+        </select>
+    
+        <h3>🏷️ 3.26. Nombre de campo con <code>name</code></h3>
+        <p>El atributo <code>name</code> define el nombre del campo en el formulario.</p>
+        <pre><code>&lt;input type="text" name="usuario"&gt;</code></pre>
+        <input type="text" name="usuario" placeholder="Escribe tu nombre">
+    
+        <h3>📤 3.27. URL de envío con <code>action</code></h3>
+        <p>El atributo <code>action</code> especifica la URL donde se enviará el formulario.</p>
+        <pre><code>&lt;form action="procesar.php" method="POST"&gt;
+        &lt;input type="text" name="usuario"&gt;
+        &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+        &lt;/form&gt;</code></pre>
+        <form action="procesar.php" method="POST">
+            <input type="text" name="usuario" placeholder="Nombre">
+            <button type="submit">Enviar</button>
+        </form>
+    
+        <h3>🔄 3.28. Método de envío con <code>method</code></h3>
+        <p>El atributo <code>method</code> define si el formulario se envía con GET o POST.</p>
+        <pre><code>&lt;form method="POST"&gt;</code></pre>
+    
+        <h3>📦 3.29. Codificación del formulario con <code>enctype</code></h3>
+        <p>El atributo <code>enctype</code> define la forma en que se envían los datos en un formulario.</p>
+        <pre><code>&lt;form enctype="multipart/form-data"&gt;</code></pre>
+    
+        <h3>🔍 3.30. Autocompletado con <code>autocomplete</code></h3>
+        <p>El atributo <code>autocomplete</code> permite que el navegador complete los campos automáticamente.</p>
+        <pre><code>&lt;input type="text" autocomplete="on"&gt;</code></pre>
+        <input type="text" autocomplete="on" placeholder="Escribe algo">
+    
+        <h3>⚠️ 3.31. Campos obligatorios con <code>required</code></h3>
+        <p>El atributo <code>required</code> obliga a que el usuario complete el campo antes de enviar el formulario.</p>
+        <pre><code>&lt;input type="text" required&gt;</code></pre>
+        <input type="text" required placeholder="Este campo es obligatorio">
+    
+        <h3>🔡 3.32. Validación con patrón usando <code>pattern</code></h3>
+        <p>El atributo <code>pattern</code> define una expresión regular para validar la entrada del usuario.</p>
+        <pre><code>&lt;input type="text" pattern="[A-Za-z]{3,}"&gt;</code></pre>
+        <input type="text" pattern="[A-Za-z]{3,}" placeholder="Solo letras (mínimo 3 caracteres)">
+    
+        <h3>📝 3.33. Mínimo de caracteres con <code>minlength</code></h3>
+        <p>El atributo <code>minlength</code> define la cantidad mínima de caracteres que un usuario debe ingresar.</p>
+        <pre><code>&lt;input type="text" minlength="5" placeholder="Mínimo 5 caracteres"&gt;</code></pre>
+        <input type="text" minlength="5" placeholder="Mínimo 5 caracteres">
+    
+        <h3>🔠 3.34. Máximo de caracteres con <code>maxlength</code></h3>
+        <p>El atributo <code>maxlength</code> define la cantidad máxima de caracteres permitidos en un campo.</p>
+        <pre><code>&lt;input type="text" maxlength="10" placeholder="Máximo 10 caracteres"&gt;</code></pre>
+        <input type="text" maxlength="10" placeholder="Máximo 10 caracteres">
+    
+        <h3>➕ 3.35. Incrementos numéricos con <code>step</code></h3>
+        <p>El atributo <code>step</code> define el tamaño del incremento en un campo numérico.</p>
+        <pre><code>&lt;input type="number" step="5"&gt;</code></pre>
+        <input type="number" step="5">
+    
+        <h3>🚀 3.36. Autoenfoque con <code>autofocus</code></h3>
+        <p>El atributo <code>autofocus</code> hace que el campo obtenga el foco automáticamente al cargar la página.</p>
+        <pre><code>&lt;input type="text" autofocus placeholder="Este campo tiene autoenfoque"&gt;</code></pre>
+        <input type="text" placeholder="Este campo tiene autoenfoque">
+    
+        <h3>⌨️ 3.37. Corrección ortográfica con <code>spellcheck</code></h3>
+        <p>El atributo <code>spellcheck</code> activa o desactiva la corrección ortográfica en campos de texto.</p>
+        <pre><code>&lt;textarea spellcheck="true"&gt;Escribe aquí...&lt;/textarea&gt;</code></pre>
+        <textarea spellcheck="true" placeholder="Prueba la corrección ortográfica"></textarea>
+    
+        <h3>📜 3.38. Ajuste del texto en <code>textarea</code> con <code>wrap</code></h3>
+        <p>El atributo <code>wrap</code> controla cómo se ajusta el texto en un `textarea`.  
+        - <code>soft</code>: El texto no se ajusta y mantiene el desplazamiento horizontal.  
+        - <code>hard</code>: El texto se ajusta automáticamente al ancho del área de texto y al enviar el formulario, se conserva el formato.</p>
+        <pre><code>&lt;textarea wrap="hard"&gt;Texto con ajuste forzado&lt;/textarea&gt;</code></pre>
+        <textarea wrap="hard" placeholder="Escribe aquí y observa cómo se ajusta el texto"></textarea>
+    
+        <h3>📏 3.39. Columnas en <code>textarea</code> con <code>cols</code></h3>
+        <p>El atributo <code>cols</code> define el ancho visible en número de caracteres.</p>
+        <pre><code>&lt;textarea cols="40"&gt;&lt;/textarea&gt;</code></pre>
+        <textarea cols="40" placeholder="Este textarea tiene 40 columnas"></textarea>
+    
+        <h3>📐 3.40. Filas en <code>textarea</code> con <code>rows</code></h3>
+        <p>El atributo <code>rows</code> define la altura visible en número de líneas de texto.</p>
+        <pre><code>&lt;textarea rows="5"&gt;&lt;/textarea&gt;</code></pre>
+        <textarea rows="5" placeholder="Este textarea tiene 5 filas"></textarea>
+    
+        <h3>🔠 3.41. Ancho de entrada con <code>size</code></h3>
+        <p>El atributo <code>size</code> define el ancho en caracteres de un campo `input type="text"`.</p>
+        <pre><code>&lt;input type="text" size="20"&gt;</code></pre>
+        <input type="text" size="20" placeholder="Ancho de 20 caracteres">
+    
+        <h3>🏷️ 3.42. Asociación de etiquetas con <code>for</code></h3>
+        <p>El atributo <code>for</code> enlaza una etiqueta `label` con un campo `input`, lo que permite que al hacer clic en el texto de la etiqueta, el campo se seleccione automáticamente.</p>
+        <pre><code>&lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+        &lt;input type="text" id="nombre"&gt;</code></pre>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre">
+    
+        <h3>⚡ 3.43. Carga diferida de scripts con <code>defer</code></h3>
+        <p>El atributo <code>defer</code> hace que el script se cargue en segundo plano y solo se ejecute después de que el HTML haya sido completamente procesado.</p>
+        <pre><code>&lt;script src="script.js" defer&gt;&lt;/script&gt;</code></pre>
+    
+        <h3>🚀 3.44. Carga asíncrona de scripts con <code>async</code></h3>
+        <p>El atributo <code>async</code> permite que el script se descargue y ejecute en paralelo mientras se procesa el HTML, lo que puede mejorar la velocidad de carga.</p>
+        <pre><code>&lt;script src="script.js" async&gt;&lt;/script&gt;</code></pre>
+    
+        <h3>🔗 3.45. Solicitudes entre dominios con <code>crossorigin</code></h3>
+        <p>El atributo <code>crossorigin</code> se usa para controlar cómo se manejan las solicitudes de recursos externos en imágenes, fuentes o scripts.</p>
+        <pre><code>&lt;img src="https://via.placeholder.com/150" crossorigin="anonymous" alt="Imagen con crossorigin"&gt;</code></pre>
+        <img src="Google_logo.svg.png" crossorigin="anonymous" alt="Imagen con crossorigin" style="border: 1px solid black;">
+    
+        <h3>🔤 3.46. Codificación de caracteres con <code>charset</code></h3>
+        <p>El atributo <code>charset</code> define la codificación de caracteres de la página para soportar caracteres especiales y símbolos correctamente.</p>
+        <pre><code>&lt;meta charset="UTF-8"&gt;</code></pre>
+        <meta charset="UTF-8">
+    
+        <h3>🖥️ 3.47. Cabeceras HTTP con <code>http-equiv</code></h3>
+        <p>El atributo <code>http-equiv</code> permite enviar cabeceras HTTP desde un documento HTML, como redireccionamientos o configuraciones de caché.</p>
+        <pre><code>&lt;meta http-equiv="refresh" content="5;url=https://www.ejemplo.com"&gt;</code></pre>
+    
+        <h3>📌 3.48. Metadatos con <code>name</code></h3>
+        <p>El atributo <code>name</code> define información adicional sobre la página web, como su descripción o palabras clave.</p>
+        <pre><code>&lt;meta name="description" content="Esta es una descripción de la página."&gt;</code></pre>
+        <meta name="description" content="Esta es una descripción de la página.">
+    
+        <h3>🔐 3.49. Restricciones en <code>iframe</code> con <code>sandbox</code></h3>
+        <p>El atributo <code>sandbox</code> restringe las acciones que un `iframe` puede realizar, evitando ejecución de scripts o accesos no autorizados.</p>
+        <pre><code>&lt;iframe src="https://www.example.com" sandbox&gt;&lt;/iframe&gt;</code></pre>
+        <iframe src="https://www.example.com" sandbox width="300" height="200" style="border: 1px solid black;"></iframe>
+    
+        <h3>🔍 3.50. Política de referencia con <code>referrerpolicy</code></h3>
+        <p>El atributo <code>referrerpolicy</code> controla qué información de referencia se envía al abrir enlaces externos, mejorando la privacidad.</p>
+        <pre><code>&lt;a href="https://www.ejemplo.com" referrerpolicy="no-referrer"&gt;Enlace sin referencia&lt;/a&gt;</code></pre>
+        <a href="https://www.ejemplo.com" referrerpolicy="no-referrer" target="_blank">Enlace sin referencia</a>
+    
+        <h3>📷 3.51. Carga diferida de imágenes con <code>loading</code></h3>
+        <p>El atributo <code>loading</code> optimiza la carga de imágenes al diferirlas hasta que estén a punto de aparecer en pantalla.</p>
+        <pre><code>&lt;img src="https://via.placeholder.com/150" loading="lazy" alt="Imagen con carga diferida"&gt;</code></pre>
+        <img src="https://via.placeholder.com/150" loading="lazy" alt="Imagen con carga diferida" style="border: 1px solid black;">
+    
+    </section>  
+
+    <section id="enlaces">
+        <h2>🔗 4. Enlaces</h2>
+        <p>Estas etiquetas permiten la navegación dentro de una página web o hacia otras páginas.</p>
+    
+        <h3>📜 Lista de etiquetas de enlaces</h3>
+        <pre><code>&lt;a&gt;, &lt;nav&gt;, &lt;map&gt;, &lt;area&gt;</code></pre>
+    
+        <!-- Enlace básico -->
+        <h3>🔗 4.1. Enlace básico <code>&lt;a&gt;</code></h3>
+        <p>Ejemplo:</p>
+        <a href="https://www.google.com" target="_blank">Visitar Google</a>
+        <pre><code>&lt;a href="https://www.google.com" target="_blank"&gt;Visitar Google&lt;/a&gt;</code></pre>
+    
+        <!-- Enlace interno -->
+        <h3>🔗 4.2. Enlace interno</h3>
+        <p>Ejemplo:</p>
+        <a href="#enlaces">Ir a la sección de enlaces</a>
+        <pre><code>&lt;a href="#enlaces"&gt;Ir a la sección de enlaces&lt;/a&gt;</code></pre>
+    
+        <!-- Enlace con título -->
+        <h3>🔗 4.3. Enlace con atributo <code>title</code></h3>
+        <p>Ejemplo:</p>
+        <a href="https://www.wikipedia.org" title="Visita Wikipedia">Ir a Wikipedia</a>
+        <pre><code>&lt;a href="https://www.wikipedia.org" title="Visita Wikipedia"&gt;Ir a Wikipedia&lt;/a&gt;</code></pre>
+    
+        <!-- Enlace que abre en una nueva pestaña -->
+        <h3>🔗 4.4. Enlace que abre en nueva pestaña</h3>
+        <p>Ejemplo:</p>
+        <a href="https://www.mozilla.org" target="_blank" rel="noopener noreferrer">Ir a Mozilla</a>
+        <pre><code>&lt;a href="https://www.mozilla.org" target="_blank" rel="noopener noreferrer"&gt;Ir a Mozilla&lt;/a&gt;</code></pre>
+    
+        <!-- Enlace para descargar archivo -->
+        <h3>📥 4.5. Enlace de descarga</h3>
+        <p>Ejemplo:</p>
+        <a href="documento.pdf" download>Descargar documento PDF</a>
+        <pre><code>&lt;a href="documento.pdf" download&gt;Descargar documento PDF&lt;/a&gt;</code></pre>
+    
+        <!-- Enlace con correo electrónico -->
+        <h3>📧 4.6. Enlace a correo electrónico</h3>
+        <p>Ejemplo:</p>
+        <a href="mailto:correo@ejemplo.com">Enviar correo</a>
+        <pre><code>&lt;a href="mailto:correo@ejemplo.com"&gt;Enviar correo&lt;/a&gt;</code></pre>
+    
+        <!-- Enlace telefónico -->
+        <h3>📞 4.7. Enlace a número de teléfono</h3>
+        <p>Ejemplo:</p>
+        <a href="tel:+123456789">Llamar al +123456789</a>
+        <pre><code>&lt;a href="tel:+123456789"&gt;Llamar al +123456789&lt;/a&gt;</code></pre>
+    
+        <!-- Menú de navegación -->
+        <h3>🧭 4.8. Menú de navegación con <code>&lt;nav&gt;</code></h3>
+        <p>Ejemplo:</p>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <pre><code>&lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#inicio"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#nosotros"&gt;Nosotros&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#contacto"&gt;Contacto&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;</code></pre>
+    
+        <!-- Mapa de imagen -->
+        <h3>📌 4.9. Mapa de imagen con <code>&lt;map&gt;</code> y <code>&lt;area&gt;</code></h3>
+        <p>Ejemplo:</p>
+        <img src="Google_logo.svg.png" usemap="#mapaEjemplo" alt="Mapa de imagen de Google" width="300">
+        <map name="mapaEjemplo">
+            <area shape="rect" coords="0,0,150,150" href="https://www.google.com" alt="Google">
+            <area shape="rect" coords="150,0,300,150" href="https://www.wikipedia.org" alt="Wikipedia">
+        </map>
+        <pre><code>&lt;img src="Google_logo.svg.png" usemap="#mapaEjemplo" alt="Mapa de imagen de Google" width="300"&gt;
+    &lt;map name="mapaEjemplo"&gt;
+        &lt;area shape="rect" coords="0,0,150,150" href="https://www.google.com" alt="Google"&gt;
+        &lt;area shape="rect" coords="150,0,300,150" href="https://www.wikipedia.org" alt="Wikipedia"&gt;
+    &lt;/map&gt;</code></pre>
+    
+    </section>
+    
+    <section id="listas">
+        <h2>📋 5. Listas</h2>
+        <p>Las listas en HTML permiten organizar información en formatos ordenados, desordenados y de definiciones.</p>
+    
+        <h3>📜 Lista de etiquetas de listas</h3>
+        <pre><code>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;, &lt;dl&gt;, &lt;dt&gt;, &lt;dd&gt;</code></pre>
+    
+        <h3>✅ 5.1. Lista desordenada <code>&lt;ul&gt;</code></h3>
+        <p>Se usa para listar elementos sin un orden específico.</p>
+        <ul>
+            <li>Manzana</li>
+            <li>Banana</li>
+            <li>Naranja</li>
+        </ul>
+        <pre><code>&lt;ul&gt;
+        &lt;li&gt;Manzana&lt;/li&gt;
+        &lt;li&gt;Banana&lt;/li&gt;
+        &lt;li&gt;Naranja&lt;/li&gt;
+    &lt;/ul&gt;</code></pre>
+    
+        <h3>🔢 5.2. Lista ordenada <code>&lt;ol&gt;</code></h3>
+        <p>Se usa cuando el orden de los elementos es importante.</p>
+        <ol>
+            <li>Encender la computadora</li>
+            <li>Abrir el navegador</li>
+            <li>Visitar Google</li>
+        </ol>
+        <pre><code>&lt;ol&gt;
+        &lt;li&gt;Encender la computadora&lt;/li&gt;
+        &lt;li&gt;Abrir el navegador&lt;/li&gt;
+        &lt;li&gt;Visitar Google&lt;/li&gt;
+    &lt;/ol&gt;</code></pre>
+    
+        <h3>📌 5.3. Lista de definición <code>&lt;dl&gt;</code></h3>
+        <p>Se usa para definir términos con sus respectivas descripciones.</p>
+        <dl>
+            <dt>HTML</dt>
+            <dd>Lenguaje de marcado para la web.</dd>
+            <dt>CSS</dt>
+            <dd>Hojas de estilo para el diseño web.</dd>
+            <dt>JavaScript</dt>
+            <dd>Lenguaje de programación para la interactividad en la web.</dd>
+        </dl>
+        <pre><code>&lt;dl&gt;
+        &lt;dt&gt;HTML&lt;/dt&gt;
+        &lt;dd&gt;Lenguaje de marcado para la web.&lt;/dd&gt;
+        &lt;dt&gt;CSS&lt;/dt&gt;
+        &lt;dd&gt;Hojas de estilo para el diseño web.&lt;/dd&gt;
+        &lt;dt&gt;JavaScript&lt;/dt&gt;
+        &lt;dd&gt;Lenguaje de programación para la interactividad en la web.&lt;/dd&gt;
+    &lt;/dl&gt;</code></pre>
+    
+        <h3>🎨 5.4. Lista ordenada con tipo personalizado</h3>
+        <p>Podemos personalizar el tipo de numeración con el atributo <code>type</code>.</p>
+        <ol type="I">
+            <li>Primer punto</li>
+            <li>Segundo punto</li>
+            <li>Tercer punto</li>
+        </ol>
+        <pre><code>&lt;ol type="I"&gt;
+        &lt;li&gt;Primer punto&lt;/li&gt;
+        &lt;li&gt;Segundo punto&lt;/li&gt;
+        &lt;li&gt;Tercer punto&lt;/li&gt;
+    &lt;/ol&gt;</code></pre>
+    
+        <h3>📌 5.5. Lista anidada</h3>
+        <p>Podemos crear listas dentro de listas.</p>
+        <ul>
+            <li>Frutas
+                <ul>
+                    <li>Manzana</li>
+                    <li>Banana</li>
+                    <li>Naranja</li>
+                </ul>
+            </li>
+            <li>Verduras
+                <ul>
+                    <li>Zanahoria</li>
+                    <li>Lechuga</li>
+                    <li>Brócoli</li>
+                </ul>
+            </li>
+        </ul>
+        <pre><code>&lt;ul&gt;
+        &lt;li&gt;Frutas
+            &lt;ul&gt;
+                &lt;li&gt;Manzana&lt;/li&gt;
+                &lt;li&gt;Banana&lt;/li&gt;
+                &lt;li&gt;Naranja&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;Verduras
+            &lt;ul&gt;
+                &lt;li&gt;Zanahoria&lt;/li&gt;
+                &lt;li&gt;Lechuga&lt;/li&gt;
+                &lt;li&gt;Brócoli&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;</code></pre>
+    
+    </section>
+    
+    <section id="tablas">
+        <h2>📊 6. Tablas</h2>
+        <p>Las tablas en HTML permiten organizar datos en filas y columnas.</p>
+    
+        <h3>📜 Lista de etiquetas de tablas</h3>
+        <pre><code>&lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, &lt;td&gt;, &lt;caption&gt;, &lt;thead&gt;, &lt;tbody&gt;, &lt;tfoot&gt;</code></pre>
+    
+        <h3>📝 6.1. Tabla básica</h3>
+        <p>Una tabla simple con filas y columnas.</p>
+        <table border="1">
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>País</th>
+            </tr>
+            <tr>
+                <td>Juan</td>
+                <td>25</td>
+                <td>España</td>
+            </tr>
+            <tr>
+                <td>María</td>
+                <td>30</td>
+                <td>México</td>
+            </tr>
+        </table>
+        <pre><code>&lt;table border="1"&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Nombre&lt;/th&gt;
+            &lt;th&gt;Edad&lt;/th&gt;
+            &lt;th&gt;País&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Juan&lt;/td&gt;
+            &lt;td&gt;25&lt;/td&gt;
+            &lt;td&gt;España&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;María&lt;/td&gt;
+            &lt;td&gt;30&lt;/td&gt;
+            &lt;td&gt;México&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;</code></pre>
+    
+        <h3>📌 6.2. Tabla con <code>&lt;caption&gt;</code></h3>
+        <p>El elemento <code>&lt;caption&gt;</code> proporciona un título a la tabla.</p>
+        <table border="1">
+            <caption>Lista de Productos</caption>
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+            </tr>
+            <tr>
+                <td>Ordenador</td>
+                <td>$800</td>
+            </tr>
+            <tr>
+                <td>Móvil</td>
+                <td>$500</td>
+            </tr>
+        </table>
+        <pre><code>&lt;table border="1"&gt;
+        &lt;caption&gt;Lista de Productos&lt;/caption&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Producto&lt;/th&gt;
+            &lt;th&gt;Precio&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Ordenador&lt;/td&gt;
+            &lt;td&gt;$800&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Móvil&lt;/td&gt;
+            &lt;td&gt;$500&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;</code></pre>
+    
+        <h3>📌 6.3. Uso de <code>&lt;thead&gt;, &lt;tbody&gt;, &lt;tfoot&gt;</code></h3>
+        <p>Estas etiquetas organizan la estructura de la tabla.</p>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ordenador</td>
+                    <td>$800</td>
+                </tr>
+                <tr>
+                    <td>Móvil</td>
+                    <td>$500</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Total</td>
+                    <td>$1300</td>
+                </tr>
+            </tfoot>
+        </table>
+        <pre><code>&lt;table border="1"&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Producto&lt;/th&gt;
+                &lt;th&gt;Precio&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Ordenador&lt;/td&gt;
+                &lt;td&gt;$800&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Móvil&lt;/td&gt;
+                &lt;td&gt;$500&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+        &lt;tfoot&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Total&lt;/td&gt;
+                &lt;td&gt;$1300&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tfoot&gt;
+    &lt;/table&gt;</code></pre>
+    
+        <h3>📌 6.4. Celdas combinadas con <code>colspan</code> y <code>rowspan</code></h3>
+        <p>Se pueden unir celdas en filas y columnas.</p>
+        <table border="1">
+            <tr>
+                <th colspan="2">Encabezado combinado</th>
+            </tr>
+            <tr>
+                <td rowspan="2">Celda combinada</td>
+                <td>Celda 2</td>
+            </tr>
+            <tr>
+                <td>Celda 3</td>
+            </tr>
+        </table>
+        <pre><code>&lt;table border="1"&gt;
+        &lt;tr&gt;
+            &lt;th colspan="2"&gt;Encabezado combinado&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td rowspan="2"&gt;Celda combinada&lt;/td&gt;
+            &lt;td&gt;Celda 2&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Celda 3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;</code></pre>
+    
+    </section>
+    
+    <section id="formularios">
+        <h2>📝 7. Formularios</h2>
+        <p>Los formularios permiten recopilar información del usuario mediante diferentes elementos de entrada.</p>
+    
+        <h3>📜 Lista de etiquetas de formularios</h3>
+        <pre><code>&lt;form&gt;, &lt;input&gt;, &lt;textarea&gt;, &lt;button&gt;, &lt;select&gt;, &lt;option&gt;, &lt;label&gt;, 
+    &lt;fieldset&gt;, &lt;legend&gt;, &lt;datalist&gt;, &lt;optgroup&gt;, &lt;output&gt;, &lt;progress&gt;, &lt;meter&gt;</code></pre>
+    
+        <h3>📝 7.1. Formulario básico</h3>
+        <p>Un formulario simple con un campo de texto y un botón de envío.</p>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
+            <button type="submit">Enviar</button>
+        </form>
+        <pre><code>&lt;form&gt;
+        &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+        &lt;input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre"&gt;
+        &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+    &lt;/form&gt;</code></pre>
+    
+        <h3>📌 7.2. Diferentes tipos de <code>&lt;input&gt;</code></h3>
+        <p>El elemento <code>&lt;input&gt;</code> tiene varios tipos para diferentes entradas de usuario.</p>
+        <form>
+            <label>Email: <input type="email" placeholder="ejemplo@correo.com"></label><br>
+            <label>Contraseña: <input type="password"></label><br>
+            <label>Número: <input type="number" min="1" max="10"></label><br>
+            <label>Fecha: <input type="date"></label><br>
+            <label>Archivo: <input type="file"></label><br>
+            <label>Color: <input type="color"></label><br>
+            <label>Rango: <input type="range" min="0" max="100"></label><br>
+            <button type="submit">Enviar</button>
+        </form>
+        <pre><code>&lt;form&gt;
+        &lt;label&gt;Email: &lt;input type="email" placeholder="ejemplo@correo.com"&gt;&lt;/label&gt;&lt;br&gt;
+        &lt;label&gt;Contraseña: &lt;input type="password"&gt;&lt;/label&gt;&lt;br&gt;
+        &lt;label&gt;Número: &lt;input type="number" min="1" max="10"&gt;&lt;/label&gt;&lt;br&gt;
+        &lt;label&gt;Fecha: &lt;input type="date"&gt;&lt;/label&gt;&lt;br&gt;
+        &lt;label&gt;Archivo: &lt;input type="file"&gt;&lt;/label&gt;&lt;br&gt;
+        &lt;label&gt;Color: &lt;input type="color"&gt;&lt;/label&gt;&lt;br&gt;
+        &lt;label&gt;Rango: &lt;input type="range" min="0" max="100"&gt;&lt;/label&gt;&lt;br&gt;
+        &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+    &lt;/form&gt;</code></pre>
+    
+        <h3>📌 7.3. Área de texto con <code>&lt;textarea&gt;</code></h3>
+        <p>Para escribir comentarios o mensajes largos.</p>
+        <form>
+            <label for="mensaje">Mensaje:</label><br>
+            <textarea id="mensaje" name="mensaje" rows="4" cols="40" placeholder="Escribe tu mensaje..."></textarea><br>
+            <button type="submit">Enviar</button>
+        </form>
+        <pre><code>&lt;form&gt;
+        &lt;label for="mensaje"&gt;Mensaje:&lt;/label&gt;&lt;br&gt;
+        &lt;textarea id="mensaje" name="mensaje" rows="4" cols="40" placeholder="Escribe tu mensaje..."&gt;&lt;/textarea&gt;&lt;br&gt;
+        &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+    &lt;/form&gt;</code></pre>
+    
+        <h3>📌 7.4. Lista desplegable con <code>&lt;select&gt;</code> y <code>&lt;option&gt;</code></h3>
+        <p>Se pueden crear listas desplegables con varias opciones.</p>
+        <form>
+            <label for="pais">Selecciona tu país:</label>
+            <select id="pais" name="pais">
+                <option value="mx">México</option>
+                <option value="es">España</option>
+                <option value="ar">Argentina</option>
+            </select>
+            <button type="submit">Enviar</button>
+        </form>
+        <pre><code>&lt;form&gt;
+        &lt;label for="pais"&gt;Selecciona tu país:&lt;/label&gt;
+        &lt;select id="pais" name="pais"&gt;
+            &lt;option value="mx"&gt;México&lt;/option&gt;
+            &lt;option value="es"&gt;España&lt;/option&gt;
+            &lt;option value="ar"&gt;Argentina&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+    &lt;/form&gt;</code></pre>
+    
+        <h3>📌 7.5. Agrupar opciones con <code>&lt;optgroup&gt;</code></h3>
+        <p>Las listas desplegables pueden tener grupos de opciones.</p>
+        <form>
+            <label for="ciudad">Selecciona tu ciudad:</label>
+            <select id="ciudad" name="ciudad">
+                <optgroup label="México">
+                    <option value="cdmx">Ciudad de México</option>
+                    <option value="gdl">Guadalajara</option>
+                </optgroup>
+                <optgroup label="España">
+                    <option value="mad">Madrid</option>
+                    <option value="bcn">Barcelona</option>
+                </optgroup>
+            </select>
+            <button type="submit">Enviar</button>
+        </form>
+        <pre><code>&lt;form&gt;
+        &lt;label for="ciudad"&gt;Selecciona tu ciudad:&lt;/label&gt;
+        &lt;select id="ciudad" name="ciudad"&gt;
+            &lt;optgroup label="México"&gt;
+                &lt;option value="cdmx"&gt;Ciudad de México&lt;/option&gt;
+                &lt;option value="gdl"&gt;Guadalajara&lt;/option&gt;
+            &lt;/optgroup&gt;
+            &lt;optgroup label="España"&gt;
+                &lt;option value="mad"&gt;Madrid&lt;/option&gt;
+                &lt;option value="bcn"&gt;Barcelona&lt;/option&gt;
+            &lt;/optgroup&gt;
+        &lt;/select&gt;
+        &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+    &lt;/form&gt;</code></pre>
+    
+        <h3>📌 7.6. Salida de datos con <code>&lt;output&gt;</code></h3>
+        <p>El elemento <code>&lt;output&gt;</code> muestra valores calculados.</p>
+        <form oninput="resultado.value = parseInt(num1.value) + parseInt(num2.value)">
+            <input type="number" id="num1" name="num1" value="0"> +
+            <input type="number" id="num2" name="num2" value="0"> =
+            <output name="resultado">0</output>
+        </form>
+        <pre><code>&lt;form oninput="resultado.value = parseInt(num1.value) + parseInt(num2.value)"&gt;
+        &lt;input type="number" id="num1" name="num1" value="0"&gt; +
+        &lt;input type="number" id="num2" name="num2" value="0"&gt; =
+        &lt;output name="resultado"&gt;0&lt;/output&gt;
+    &lt;/form&gt;</code></pre>
+    
+    </section>
+    
+    <section id="multimedia">
+        <h2>🎬 8. Multimedia</h2>
+        <p>Las etiquetas multimedia permiten incluir contenido audiovisual e imágenes en una página web.</p>
+    
+        <h3>📜 Lista de etiquetas multimedia</h3>
+        <pre><code>&lt;audio&gt;, &lt;video&gt;, &lt;picture&gt;, &lt;source&gt;, &lt;track&gt;, &lt;embed&gt;, &lt;iframe&gt;, &lt;object&gt;, &lt;img&gt;, &lt;figure&gt;, &lt;figcaption&gt;, &lt;map&gt;, &lt;area&gt;</code></pre>
+    
+        <!-- Audio -->
+        <h3>🎵 8.1. Audio con <code>&lt;audio&gt;</code></h3>
+        <p>Para incluir archivos de sonido en una página.</p>
+        <audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+            <source src="audio.ogg" type="audio/ogg">
+            Tu navegador no soporta la reproducción de audio.
+        </audio>
+        <pre><code>&lt;audio controls&gt;
+        &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+        &lt;source src="audio.ogg" type="audio/ogg"&gt;
+        Tu navegador no soporta la reproducción de audio.
+    &lt;/audio&gt;</code></pre>
+    
+        <!-- Video -->
+        <h3>🎥 8.2. Video con <code>&lt;video&gt;</code></h3>
+        <p>Para incrustar videos con diferentes formatos.</p>
+        <video controls width="400">
+            <source src="43.mp4" type="video/mp4">
+            <source src="video.ogg" type="video/ogg">
+            Tu navegador no soporta la reproducción de video.
+        </video>
+        <pre><code>&lt;video controls width="400"&gt;
+        &lt;source src="video.mp4" type="video/mp4"&gt;
+        &lt;source src="video.ogg" type="video/ogg"&gt;
+        Tu navegador no soporta la reproducción de video.
+    &lt;/video&gt;</code></pre>
+    
+        <!-- Imágenes -->
+        <h3>🖼️ 8.3. Imágenes con <code>&lt;img&gt;</code></h3>
+        <p>Permite mostrar imágenes en una página.</p>
+        <img src="Google_logo.svg.png" alt="Logo de Google" width="150">
+        <pre><code>&lt;img src="Google_logo.svg.png" alt="Logo de Google" width="150"&gt;</code></pre>
+    
+        <!-- Imágenes adaptativas -->
+        <h3>🖼️ 8.4. Imágenes adaptativas con <code>&lt;picture&gt;</code></h3>
+        <p>Permite cargar diferentes imágenes según el tamaño de pantalla.</p>
+        <picture>
+            <source srcset="Google_logo.svg.png" media="(min-width: 800px)">
+            <source srcset="Google_logo.svg.png" media="(max-width: 799px)">
+            <img src="Google_logo.svg.png" alt="Imagen adaptable">
+        </picture>
+        <pre><code>&lt;picture&gt;
+        &lt;source srcset="imagen_grande.jpg" media="(min-width: 800px)"&gt;
+        &lt;source srcset="imagen_pequena.jpg" media="(max-width: 799px)"&gt;
+        &lt;img src="imagen_default.jpg" alt="Imagen adaptable"&gt;
+    &lt;/picture&gt;</code></pre>
+    
+        <!-- Imagen con descripción -->
+        <h3>🖼️ 8.5. Imagen con descripción <code>&lt;figure&gt;</code> y <code>&lt;figcaption&gt;</code></h3>
+        <p>Ejemplo:</p>
+        <figure>
+            <img src="Google_logo.svg.png" alt="Logo de Google con descripción" width="200">
+            <figcaption>El logo de Google, una de las empresas más grandes del mundo.</figcaption>
+        </figure>
+        <pre><code>&lt;figure&gt;
+        &lt;img src="Google_logo.svg.png" alt="Logo de Google con descripción" width="200"&gt;
+        &lt;figcaption&gt;El logo de Google, una de las empresas más grandes del mundo.&lt;/figcaption&gt;
+    &lt;/figure&gt;</code></pre>
+    
+        <!-- Mapa de imagen -->
+        <h3>📌 8.6. Mapa de imagen con <code>&lt;map&gt;</code> y <code>&lt;area&gt;</code></h3>
+        <p>Ejemplo:</p>
+        <img src="Google_logo.svg.png" usemap="#mapaEjemplo" alt="Mapa de imagen de Google" width="300">
+        <map name="mapaEjemplo">
+            <area shape="rect" coords="0,0,150,150" href="https://www.google.com" alt="Google">
+            <area shape="rect" coords="150,0,300,150" href="https://www.wikipedia.org" alt="Wikipedia">
+        </map>
+        <pre><code>&lt;img src="Google_logo.svg.png" usemap="#mapaEjemplo" alt="Mapa de imagen de Google" width="300"&gt;
+    &lt;map name="mapaEjemplo"&gt;
+        &lt;area shape="rect" coords="0,0,150,150" href="https://www.google.com" alt="Google"&gt;
+        &lt;area shape="rect" coords="150,0,300,150" href="https://www.wikipedia.org" alt="Wikipedia"&gt;
+    &lt;/map&gt;</code></pre>
+    
+        <!-- Subtítulos en video -->
+        <h3>🎭 8.7. Subtítulos en videos con <code>&lt;track&gt;</code></h3>
+        <p>Se usa para agregar subtítulos en distintos idiomas.</p>
+        <video controls width="400">
+            <source src="43.mp4" type="video/mp4">
+            <track src="subtitulos_es.vtt" kind="subtitles" srclang="es" label="Español">
+            <track src="subtitulos_en.vtt" kind="subtitles" srclang="en" label="English">
+        </video>
+        <pre><code>&lt;video controls width="400"&gt;
+        &lt;source src="video.mp4" type="video/mp4"&gt;
+        &lt;track src="subtitulos_es.vtt" kind="subtitles" srclang="es" label="Español"&gt;
+        &lt;track src="subtitulos_en.vtt" kind="subtitles" srclang="en" label="English"&gt;
+    &lt;/video&gt;</code></pre>
+    
+        <!-- Contenido externo -->
+        <h3>🌍 8.8. Incrustar contenido externo con <code>&lt;iframe&gt;</code></h3>
+        <p>Ejemplo de un video de YouTube incrustado.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/kN1XP-Bef7w" 
+            title="Video de ejemplo" frameborder="0" allowfullscreen>
+        </iframe>
+        <pre><code>&lt;iframe width="560" height="315" 
+        src="https://www.youtube.com/embed/kN1XP-Bef7w" 
+        title="Video de ejemplo" frameborder="0" allowfullscreen&gt;
+    &lt;/iframe&gt;</code></pre>
+    
+        <!-- Contenido incrustado -->
+        <h3>📂 8.9. Contenido incrustado con <code>&lt;embed&gt;</code></h3>
+        <p>Ejemplo de un contenido incrustado.</p>
+        <embed src="XOsX.gif" type="application/pdf" width="600" height="450">
+        <pre><code>&lt;embed src="documento.pdf" type="application/pdf" width="600" height="450"&gt;</code></pre>
+    
+        <!-- Objetos incrustados -->
+        <h3>📜 8.10. Objetos incrustados con <code>&lt;object&gt;</code></h3>
+        <p>Ejemplo de un PDF incrustado.</p>
+        <object data="MANUAL-HTML-Y-CSS.pdf" type="application/pdf" width="600" height="400">
+            Tu navegador no soporta la visualización de PDFs.
+        </object>
+        <pre><code>&lt;object data="documento.pdf" type="application/pdf" width="600" height="400"&gt;
+        Tu navegador no soporta la visualización de PDFs.
+    &lt;/object&gt;</code></pre>
+    
+    </section>
+    
+    <section id="interactivos">
+        <h2>🎮 9. Elementos Interactivos</h2>
+        <p>Estos elementos permiten la interacción del usuario con la página web, mejorando la experiencia mediante botones, cuadros de diálogo, formularios y otros controles.</p>
+    
+        <h3>📜 Lista de etiquetas interactivas</h3>
+        <pre><code>&lt;button&gt;, &lt;details&gt;, &lt;summary&gt;, &lt;dialog&gt;, &lt;progress&gt;, &lt;meter&gt;, &lt;input&gt;, &lt;select&gt;, &lt;option&gt;, &lt;datalist&gt;, &lt;textarea&gt;, &lt;output&gt;, &lt;label&gt;, &lt;fieldset&gt;, &lt;legend&gt;</code></pre>
+    
+        <!-- Botón -->
+        <h3>🖱️ 9.1. Botón con <code>&lt;button&gt;</code></h3>
+        <button onclick="alert('¡Botón presionado!')">Haz clic aquí</button>
+        <pre><code>&lt;button onclick="alert('¡Botón presionado!')"&gt;Haz clic aquí&lt;/button&gt;</code></pre>
+    
+        <!-- Details & Summary -->
+        <h3>📂 9.2. Detalles expandibles con <code>&lt;details&gt;</code> y <code>&lt;summary&gt;</code></h3>
+        <details>
+            <summary>Haz clic para ver más detalles</summary>
+            <p>Este es el contenido adicional que se muestra al expandir.</p>
+        </details>
+        <pre><code>&lt;details&gt;
+        &lt;summary&gt;Haz clic para ver más detalles&lt;/summary&gt;
+        &lt;p&gt;Este es el contenido adicional que se muestra al expandir.&lt;/p&gt;
+    &lt;/details&gt;</code></pre>
+    
+        <!-- Dialog -->
+        <h3>💬 9.3. Cuadro de diálogo con <code>&lt;dialog&gt;</code></h3>
+        <button onclick="document.getElementById('miDialogo').showModal()">Abrir diálogo</button>
+        <dialog id="miDialogo">
+            <p>Este es un cuadro de diálogo.</p>
+            <button onclick="document.getElementById('miDialogo').close()">Cerrar</button>
+        </dialog>
+        <pre><code>&lt;button onclick="document.getElementById('miDialogo').showModal()"&gt;Abrir diálogo&lt;/button&gt;
+    &lt;dialog id="miDialogo"&gt;
+        &lt;p&gt;Este es un cuadro de diálogo.&lt;/p&gt;
+        &lt;button onclick="document.getElementById('miDialogo').close()"&gt;Cerrar&lt;/button&gt;
+    &lt;/dialog&gt;</code></pre>
+    
+        <!-- Progress -->
+        <h3>⏳ 9.4. Barra de progreso con <code>&lt;progress&gt;</code></h3>
+        <progress value="70" max="100"></progress>
+        <pre><code>&lt;progress value="70" max="100"&gt;&lt;/progress&gt;</code></pre>
+    
+        <!-- Meter -->
+        <h3>📊 9.5. Indicador de medición con <code>&lt;meter&gt;</code></h3>
+        <meter value="3" min="0" max="5"></meter>
+        <pre><code>&lt;meter value="3" min="0" max="5"&gt;&lt;/meter&gt;</code></pre>
+    
+        <!-- Input -->
+        <h3>⌨️ 9.6. Campo de entrada con <code>&lt;input&gt;</code></h3>
+        <input type="text" placeholder="Escribe algo aquí">
+        <pre><code>&lt;input type="text" placeholder="Escribe algo aquí"&gt;</code></pre>
+    
+        <!-- Select & Option -->
+        <h3>📋 9.7. Menú desplegable con <code>&lt;select&gt;</code> y <code>&lt;option&gt;</code></h3>
+        <select>
+            <option value="op1">Opción 1</option>
+            <option value="op2">Opción 2</option>
+            <option value="op3">Opción 3</option>
+        </select>
+        <pre><code>&lt;select&gt;
+        &lt;option value="op1"&gt;Opción 1&lt;/option&gt;
+        &lt;option value="op2"&gt;Opción 2&lt;/option&gt;
+        &lt;option value="op3"&gt;Opción 3&lt;/option&gt;
+    &lt;/select&gt;</code></pre>
+    
+        <!-- Datalist -->
+        <h3>🔍 9.8. Sugerencias de entrada con <code>&lt;datalist&gt;</code></h3>
+        <input list="navegadores" placeholder="Escribe un navegador">
+        <datalist id="navegadores">
+            <option value="Chrome">
+            <option value="Firefox">
+            <option value="Safari">
+            <option value="Edge">
+            <option value="Opera">
+        </datalist>
+        <pre><code>&lt;input list="navegadores" placeholder="Escribe un navegador"&gt;
+    &lt;datalist id="navegadores"&gt;
+        &lt;option value="Chrome"&gt;
+        &lt;option value="Firefox"&gt;
+        &lt;option value="Safari"&gt;
+        &lt;option value="Edge"&gt;
+        &lt;option value="Opera"&gt;
+    &lt;/datalist&gt;</code></pre>
+    
+        <!-- Textarea -->
+        <h3>📝 9.9. Área de texto con <code>&lt;textarea&gt;</code></h3>
+        <textarea placeholder="Escribe un comentario"></textarea>
+        <pre><code>&lt;textarea placeholder="Escribe un comentario"&gt;&lt;/textarea&gt;</code></pre>
+    
+        <!-- Output -->
+        <h3>📢 9.10. Salida de datos con <code>&lt;output&gt;</code></h3>
+        <form oninput="resultado.value=parseInt(a.value)+parseInt(b.value)">
+            <input type="number" id="a" value="0"> +
+            <input type="number" id="b" value="0"> =
+            <output name="resultado">0</output>
+        </form>
+        <pre><code>&lt;form oninput="resultado.value=parseInt(a.value)+parseInt(b.value)"&gt;
+        &lt;input type="number" id="a" value="0"&gt; +
+        &lt;input type="number" id="b" value="0"&gt; =
+        &lt;output name="resultado"&gt;0&lt;/output&gt;
+    &lt;/form&gt;</code></pre>
+    
+        <!-- Fieldset & Legend -->
+        <h3>📦 9.11. Agrupar elementos con <code>&lt;fieldset&gt;</code> y <code>&lt;legend&gt;</code></h3>
+        <fieldset>
+            <legend>Información personal</legend>
+            <label>Nombre: <input type="text"></label>
+            <label>Edad: <input type="number"></label>
+        </fieldset>
+        <pre><code>&lt;fieldset&gt;
+        &lt;legend&gt;Información personal&lt;/legend&gt;
+        &lt;label&gt;Nombre: &lt;input type="text"&gt;&lt;/label&gt;
+        &lt;label&gt;Edad: &lt;input type="number"&gt;&lt;/label&gt;
+    &lt;/fieldset&gt;</code></pre>
+    
+    </section>
+
+    <section id="meta">
+        <h2>📝 10. Metaetiquetas en HTML</h2>
+        <p>Las metaetiquetas proporcionan información sobre la página web a los navegadores y motores de búsqueda.</p>
+    
+        <h3>📜 Lista de etiquetas de estructura</h3>
+        <p>Estas etiquetas ayudan a estructurar correctamente el contenido de una página web.</p>
+        <pre><code>&lt;html&gt;, &lt;head&gt;, &lt;body&gt;, &lt;header&gt;, &lt;footer&gt;, &lt;main&gt;, &lt;section&gt;, &lt;article&gt;, &lt;nav&gt;, 
+        &lt;aside&gt;, &lt;div&gt;, &lt;address&gt;, &lt;figure&gt;, &lt;figcaption&gt;, &lt;summary&gt;, &lt;details&gt;, 
+        &lt;dialog&gt;, &lt;template&gt;, &lt;fieldset&gt;, &lt;legend&gt;</code></pre>
+    
+        <h3>🔠 10.1. Definir la codificación de caracteres con <code>charset</code></h3>
+        <p>El atributo <code>charset</code> define la codificación de caracteres de la página para evitar errores con acentos y caracteres especiales.</p>
+        <pre><code>&lt;meta charset="UTF-8"&gt;</code></pre>
+    
+        <h3>📌 10.2. Especificar descripción con <code>name="description"</code></h3>
+        <p>El atributo <code>name="description"</code> proporciona un resumen del contenido de la página, útil para SEO.</p>
+        <pre><code>&lt;meta name="description" content="Guía completa sobre HTML y sus etiquetas."&gt;</code></pre>
+    
+        <h3>🔍 10.3. Palabras clave con <code>name="keywords"</code></h3>
+        <p>El atributo <code>name="keywords"</code> define palabras clave relacionadas con el contenido de la página.</p>
+        <pre><code>&lt;meta name="keywords" content="HTML, CSS, JavaScript, desarrollo web"&gt;</code></pre>
+    
+        <h3>🌍 10.4. Configurar el viewport con <code>name="viewport"</code></h3>
+        <p>El atributo <code>name="viewport"</code> define cómo se muestra la página en dispositivos móviles.</p>
+        <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+    
+        <h3>🔄 10.5. Redireccionamiento con <code>http-equiv="refresh"</code></h3>
+        <p>El atributo <code>http-equiv="refresh"</code> permite redirigir a otra página después de un tiempo determinado.</p>
+        <pre><code>&lt;meta http-equiv="refresh" content="5;url=https://www.ejemplo.com"&gt;</code></pre>
+    
+        <h3>⏳ 10.6. Control de caché con <code>http-equiv="cache-control"</code></h3>
+        <p>El atributo <code>http-equiv="cache-control"</code> indica cómo se debe almacenar la página en caché.</p>
+        <pre><code>&lt;meta http-equiv="cache-control" content="no-cache"&gt;</code></pre>
+    
+        <h3>🔗 10.7. Política de referencia con <code>referrerpolicy</code></h3>
+        <p>El atributo <code>referrerpolicy</code> define qué información de referencia se envía al abrir enlaces externos.</p>
+        <pre><code>&lt;meta name="referrer" content="no-referrer"&gt;</code></pre>
+    
+        <h3>🛑 10.8. Configuración de X-UA-Compatible</h3>
+        <p>El atributo <code>http-equiv="X-UA-Compatible"</code> indica cómo se debe procesar la página en navegadores antiguos.</p>
+        <pre><code>&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;</code></pre>
+    
+        <h3>🔏 10.9. Seguridad con <code>http-equiv="content-security-policy"</code></h3>
+        <p>El atributo <code>http-equiv="content-security-policy"</code> ayuda a prevenir ataques como inyección de scripts.</p>
+        <pre><code>&lt;meta http-equiv="content-security-policy" content="default-src 'self'"&gt;</code></pre>
+    
+        <h3>📲 10.10. Icono de la página con <code>link rel="icon"</code></h3>
+        <p>Para definir un favicon, se usa la etiqueta <code>link</code> con <code>rel="icon"</code>.</p>
+        <pre><code>&lt;link rel="icon" href="favicon.ico" type="image/x-icon"&gt;</code></pre>
+    </section>
+    
+    <section id="accesibilidad">
+        <h2>♿ 11. Accesibilidad en HTML</h2>
+        <p>La accesibilidad web garantiza que las personas con discapacidad puedan navegar e interactuar con los sitios web de manera efectiva. HTML proporciona diversas etiquetas y atributos para mejorar la accesibilidad.</p>
+    
+        <h3>📜 Lista de etiquetas y atributos de accesibilidad</h3>
+        <pre><code>&lt;label&gt;, &lt;alt&gt;, &lt;title&gt;, &lt;aria-label&gt;, &lt;aria-labelledby&gt;, &lt;aria-describedby&gt;, &lt;role&gt;, 
+        &lt;tabindex&gt;, &lt;accesskey&gt;, &lt;aria-hidden&gt;, &lt;aria-live&gt;, &lt;aria-disabled&gt;, &lt;aria-expanded&gt;, 
+        &lt;aria-checked&gt;, &lt;aria-pressed&gt;, &lt;aria-selected&gt;, &lt;aria-busy&gt;</code></pre>
+    
+        <h3>🏷️ 11.1. Etiquetas de formularios con <code>label</code></h3>
+        <p>El uso de <code>label</code> mejora la accesibilidad de los formularios al enlazar etiquetas con campos de entrada.</p>
+        <pre><code>&lt;label for="email"&gt;Correo electrónico:&lt;/label&gt;
+        &lt;input type="email" id="email" name="email"&gt;</code></pre>
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email">
+    
+        <h3>🖼️ 11.2. Texto alternativo con <code>alt</code></h3>
+        <p>El atributo <code>alt</code> proporciona una descripción textual para imágenes, útil para lectores de pantalla.</p>
+        <pre><code>&lt;img src="imagen.jpg" alt="Descripción de la imagen"&gt;</code></pre>
+        <img src="Google_logo.svg.pngq" alt="Imagen de ejemplo" style="border: 1px solid black;">
+    
+        <h3>ℹ️ 11.3. Información adicional con <code>title</code></h3>
+        <p>El atributo <code>title</code> proporciona información adicional cuando el usuario pasa el cursor sobre un elemento.</p>
+        <pre><code>&lt;p title="Este es un mensaje de ayuda"&gt;Pasa el mouse sobre este texto.&lt;/p&gt;</code></pre>
+        <p title="Este es un mensaje de ayuda" style="border-bottom: 1px dashed black;">Pasa el mouse sobre este texto.</p>
+    
+        <h3>🔠 11.4. Navegación con <code>tabindex</code></h3>
+        <p>El atributo <code>tabindex</code> controla el orden de navegación con la tecla "Tab".</p>
+        <pre><code>&lt;input type="text" tabindex="2" placeholder="Segundo campo"&gt;
+        &lt;input type="text" tabindex="1" placeholder="Primer campo"&gt;</code></pre>
+        <input type="text" tabindex="2" placeholder="Segundo campo">
+        <input type="text" tabindex="1" placeholder="Primer campo">
+    
+        <h3>⌨️ 11.5. Atajos de teclado con <code>accesskey</code></h3>
+        <p>El atributo <code>accesskey</code> permite acceder rápidamente a un elemento mediante combinaciones de teclas.</p>
+        <pre><code>&lt;p accesskey="h"&gt;Presiona "Alt + H" para acceder rápido.&lt;/p&gt;</code></pre>
+        <p accesskey="h" style="border: 1px solid black; padding: 5px;">Presiona "Alt + H" para acceder rápido.</p>
+    
+        <h3>🔒 11.6. Elementos ocultos con <code>aria-hidden</code></h3>
+        <p>El atributo <code>aria-hidden="true"</code> oculta un elemento para lectores de pantalla sin ocultarlo visualmente.</p>
+        <pre><code>&lt;p aria-hidden="true"&gt;Este texto es invisible para lectores de pantalla.&lt;/p&gt;</code></pre>
+        <p aria-hidden="true" style="color: gray;">Este texto es invisible para lectores de pantalla.</p>
+    
+        <h3>📢 11.7. Áreas en vivo con <code>aria-live</code></h3>
+        <p>El atributo <code>aria-live</code> indica que el contenido del elemento puede cambiar dinámicamente y debe ser anunciado por lectores de pantalla.</p>
+        <pre><code>&lt;div aria-live="polite"&gt;Mensaje importante que se actualizará.&lt;/div&gt;</code></pre>
+        <div aria-live="polite" style="border: 1px solid black; padding: 5px;">Mensaje importante que se actualizará.</div>
+    
+        <h3>🛑 11.8. Deshabilitar elementos con <code>aria-disabled</code></h3>
+        <p>El atributo <code>aria-disabled="true"</code> informa a los lectores de pantalla que el elemento está deshabilitado.</p>
+        <pre><code>&lt;button aria-disabled="true"&gt;Botón deshabilitado&lt;/button&gt;</code></pre>
+        <button aria-disabled="true" disabled>Botón deshabilitado</button>
+    
+        <h3>🔼 11.9. Elementos expandibles con <code>aria-expanded</code></h3>
+        <p>El atributo <code>aria-expanded</code> indica si un elemento, como un menú desplegable, está expandido o colapsado.</p>
+        <pre><code>&lt;button aria-expanded="false"&gt;Mostrar opciones&lt;/button&gt;</code></pre>
+        <button aria-expanded="false">Mostrar opciones</button>
+    
+        <h3>✅ 11.10. Estados de selección con <code>aria-checked</code> y <code>aria-selected</code></h3>
+        <p>El atributo <code>aria-checked</code> indica si un checkbox está marcado, y <code>aria-selected</code> si un elemento de una lista está seleccionado.</p>
+        <pre><code>&lt;input type="checkbox" aria-checked="true"&gt; Opción activada</code></pre>
+        <input type="checkbox" aria-checked="true" checked> Opción activada
+    
+    </section>
+    
+    <footer>
+        <p>🚀 Guía optimizada para aprender HTML de manera práctica.</p>
+        <p>© 2024 Guía de HTML - Todos los derechos reservados. | <a href="📖 Guía Completa de CSS.html">Ir a Guía de CSS</a></p>
+    </footer>
+
+    <script src="SCRIPT-HTML.js"></script>
+</body>
+</html>
